@@ -1,4 +1,4 @@
 <!--index.wxml-->
-<view class="container">
-  Weixin
+<view  class="container">
+  <TapNav title="详情" navBgColor="linear-gradient(90deg, rgba(0, 81, 255, 0.06) 0%, rgba(255, 87, 51, 0.04) 100%);" backDelta="1"/>
 </view>

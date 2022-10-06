@@ -1,1 +1,10 @@
 /**index.wxss**/
+page{
+    background: #FAFAFA;
+}
+.container {
+    padding: 0 0 400rpx;
+    min-height: 99vh;
+    box-sizing: border-box;
+    /* z-index: 2;*/
+}

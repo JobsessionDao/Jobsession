@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "TapNav":"../../component/TabNav/index"
+  },
+  "navigationStyle": "custom"
 }
