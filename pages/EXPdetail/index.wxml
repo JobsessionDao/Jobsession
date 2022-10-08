@@ -1,0 +1,49 @@
+<!--pages/EXPdetail/EXPdetail.wxml-->
+
+<!-- TOPBAR -->
+<view class="cyTopBar">
+    <TapNav title="详情" backDelta="1"/>
+    <view class="cyTopCircle"></view>
+    <image class="cyTopBgiron" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_lightbulb.png"></image>
+    <view class="cyTopTitle">{{title}}</view>
+    <view class="cyTopText">
+        <text>{{author}}</text>
+        <text>{{time}}</text>
+    </view>
+</view>
+
+<view class="cyContent">
+    <view class="cyContentText">{{ContentTest}}</view>
+    <view class="cyImageList">
+        <view wx:for="{{imageList}}" wx:for-item="item" wx:key="xxx">
+            <view class="cyContentImage">
+                <image src='{{item}}'></image>
+            </view>
+        </view>
+    </view>
+
+
+    <view class="cyCommentsTitle">
+        <text>评论</text>
+    </view>
+
+    <view wx:for="{{cyComments}}" wx:for-item="Comments" wx:key="xxx">
+        <!-- 小卡片 -->
+        <view class="cyCommentsBlock">
+            <!-- 标题 -->
+            <view class="cyCommentsAuthor">
+                {{Comments.CommentName}}
+            </view>
+
+            <view class="cyCommentsTime">
+                {{Comments.Ctime}}
+            </view>
+
+            <view class="cyComments">
+                {{Comments.Comment}}
+            </view>
+
+        </view>
+    </view>
+    <view class="cyTabBlock"></view>
+</view>
