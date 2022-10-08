@@ -1,20 +1,20 @@
 /* pages/QaAdetail/index.wxss */
 page {
     background: rgba(250, 250, 250, 1);
-  }
-  
-  .cyTopBar {
+}
+
+.cyTopBar {
     position: fixed;
     top: 0;
     left: 16rpx;
     width: 96%;
-    height: 400rpx;
+    height: 420rpx;
     z-index: 2;
     background-color: rgba(250, 250, 250, 1);
     border-bottom: 1px solid rgba(230, 231, 237, 1);
-  }
-  
-  .cyTopCircle {
+}
+
+.cyTopCircle {
     position: fixed;
     left: -63px;
     top: -270px;
@@ -23,26 +23,26 @@ page {
     opacity: 1;
     background: rgba(255, 87, 51, 0.51);
     filter: blur(80px);
-  }
-  
-  .cyTopBgiron {
+}
+
+.cyTopBgiron {
     position: fixed;
     left: 440rpx;
     top: -50rpx;
     width: 350rpx;
     height: 350rpx;
     opacity: 0.7;
-  }
-  
-  .cyTopTitle {
+}
+
+.cyTopTitle {
     position: fixed;
     top: 200rpx;
     left: 40rpx;
     font-size: 24px;
     font-weight: 700;
-  }
-  
-  .cyTopText {
+}
+
+.cyTopText {
     position: fixed;
     z-index: 1;
     padding: 0 40rpx;
@@ -52,14 +52,14 @@ page {
     font-weight: 700;
     color: rgba(0, 0, 0, 0.35);
     box-sizing: border-box;
-  }
-  
-  .cyTopText text {
+}
+
+.cyTopText text {
     display: inline-block;
     margin-right: 20rpx;
-  }
-  
-  .cyQdetail {
+}
+
+.cyQdetail {
     position: relative;
     display: block;
     padding: 10rpx 0;
@@ -67,35 +67,35 @@ page {
     font-weight: 400;
     color: black;
     /* background-color: blue; */
-  }
-  
-  .cyContent {
+}
+
+.cyContent {
     position: relative;
     width: 90%;
-    top: 380rpx;
+    top: 400rpx;
     left: 20px;
-  }
-  
-  .cyCommentsTitle {
+}
+
+.cyCommentsTitle {
     margin: auto;
     margin-top: 40rpx;
     width: 180rpx;
     height: 40rpx;
     text-align: center;
     border-bottom: 20rpx solid rgba(255, 87, 51, 0.61);
-  }
-  
-  .cyCommentsTitle text {
+}
+
+.cyCommentsTitle text {
     position: relative;
     top: 13rpx;
     font-size: 20px;
     font-weight: 700;
     line-height: 40rpx;
-  }
-  
-  
-  
-  .cyCommentsBlock {
+}
+
+
+
+.cyCommentsBlock {
     position: relative;
     margin: auto;
     margin-top: 15rpx;
@@ -105,9 +105,9 @@ page {
     border-radius: 30rpx;
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
-  }
-  
-  .cyCommentsAuthor {
+}
+
+.cyCommentsAuthor {
     width: 70%;
     padding: 0 20rpx;
     border-left: 12rpx solid rgba(255, 87, 51, 0.51);
@@ -116,9 +116,9 @@ page {
     word-break: break-all;
     box-sizing: border-box;
     display: inline-block;
-  }
-  
-  .cyCommentsTime {
+}
+
+.cyCommentsTime {
     display: inline-block;
     position: absolute;
     right: 40rpx;
@@ -126,58 +126,79 @@ page {
     font-size: 15px;
     font-weight: 700;
     color: rgba(0, 0, 0, 0.35);
-  }
-  
-  .cyComments {
+}
+
+.cyComments {
     margin-top: 15rpx;
     font-size: 15px;
     font-weight: 400;
-    line-height: 35rpx;
-  }
-  
-  .cyTabBlock {
+    line-height: 40rpx;
+}
+
+.cyTabBlock {
     width: 100%;
     height: 160rpx;
-  }
+}
 
-  .cyFooter{
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      height: 110rpx;
-      border-top: 1rpx solid rgba(230, 231, 237, 1);
-      background-color: rgb(255, 255, 255);
-  }
+.cyFooter {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 110rpx;
+    border-top: 1rpx solid rgba(230, 231, 237, 1);
+    background-color: rgb(255, 255, 255);
+}
 
-  .cyLike{
-      position: relative;
-      display: inline-block;
-      overflow: hidden;
-      line-height: 65rpx;
-      top: 50%;
-      left: 5%;
-      transform:translateY(-50%);
-      width: 20%;
-      height: 70rpx;
-      border-radius: 100rpx;
-      background-color: rgb(22, 168, 124);
-  }
-
-  .cyLike image{
-      margin-left: 16rpx;
-      vertical-align: middle;
-      width:50rpx;
-      height: 50rpx;
-  }
-
-  .cyTextArea{
+.cyLike {
     position: relative;
-    display: inline-block;
-    top: 50%;
+    display: inline-flex;
+    align-items: center;
+    overflow: hidden;
+    left: 5%;
+    width: 20%;
+    height: 70rpx;
+    border-radius: 100rpx;
+    background-color: rgba(255, 87, 51, 0.1);
+}
+
+.cyLike image {
+    margin-left: 30rpx;
+    width: 45rpx;
+    height: 45rpx;
+}
+
+.cyLike text {
+    margin: 10rpx;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 87, 51, 1);
+}
+
+.cyTextArea {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
     left: 7%;
-    transform:translateY(-50%);
     width: 68%;
     height: 70rpx;
     border-radius: 100rpx;
-    background-color: rgb(189, 255, 235);
-  }
+    background-color: rgba(247, 247, 247, 1);
+}
+
+.cyTextArea input {
+    width: 80%;
+    height: 70rpx;
+    margin-left: 30rpx;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(204, 205, 207, 1);
+}
+
+.cyTextArea image {
+
+    width: 54rpx;
+    height: 54rpx;
+}

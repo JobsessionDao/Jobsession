@@ -1,0 +1,13 @@
+<!--pages/HollandResult/index.wxml-->
+<goback1></goback1>
+<view class="cyBgLeft"></view>
+<view class="cyBgRight"></view>
+<view class="container">
+    <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/poiu.png"></image>
+    <text class="cyKind">{{kind}}</text>
+    <text class="cyKindDetail">{{one}}</text>
+    <view class="cyHoBotton" hover-class="cyHoBotton_hover" bindtap="goBacktoHO">
+        <text>完成测试</text>
+    </view>
+    <text class="cyNotice">结果仅供参考</text>
+</view>

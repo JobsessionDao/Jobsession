@@ -47,3 +47,16 @@
     </view>
     <view class="cyTabBlock"></view>
 </view>
+
+
+<view class="cyFooter">
+    <view class="cyLike">
+        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_media-heart-03.png"></image>
+        <text>{{viewed}}</text>
+    </view>
+
+    <view class="cyTextArea">
+        <input 	value="发表评论"></input>
+        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/ioi3.png"></image>
+    </view>
+</view>
