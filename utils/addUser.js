@@ -37,11 +37,11 @@ var addUser = {
         success: function (res) {
           // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
           console.log(res);
-          resolve(res);
+          resolve("添加成功");
         },
         fail: function (res) {
           console.log(res);
-          reject(res);
+          reject("添加失败");
         },
       });
     });

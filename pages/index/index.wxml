@@ -4,7 +4,10 @@
 
 
 <view class="container" style="position: relative;top:400rpx">
-  <view wx:for="{{itemList}}" style="margin-top: 100rpx;" wx:key="_id"> {{item.desc}} </view>
   <button bindtap="login">登录</button>
   <button bindtap="addme">添加我的信息</button>
+  <button bindtap="like">点赞</button>
+  <button bindtap="collect">收藏</button>
+  <view wx:for="{{itemList}}" style="margin-top: 100rpx;" wx:key="_id"> {{item.desc}} </view>
+
 </view>

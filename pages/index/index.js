@@ -2,12 +2,15 @@
 let getUserID = require("../../utils/getUserID.js");
 let addUser = require("../../utils/addUser.js");
 let addArticle = require("../../utils/addArticle.js");
+let addLike = require("../../utils/addLike.js");
+let addComment = require("../../utils/addComment.js");
+let addCollect = require("../../utils/addCollect.js");
 // let load = require("../../utils/load.js");
 let count;
 let db;
 let articleList;
 let allLength;
-let isAll=false;
+let isAll = false;
 Page({
   data: {
     navHeight: 0,
@@ -24,13 +27,13 @@ Page({
     articleList = db.collection("articleList");
     count = await db.collection("articleList").count();
     this.fn();
-    this.loadMethod(2);
+    this.loadMethod(1);
   },
   onLaunch: function () {
     // this.getMenuButtonBound();
   },
-  onReachBottom:async function(){
-    this.loadMethod(2);
+  onReachBottom: async function () {
+    this.loadMethod(1);
   },
   async addme() {
     // let res=await addUser.addUser.addMethod(this.data.userName,this.data.userAvatar,this.data.userID)
@@ -81,13 +84,13 @@ Page({
           .then((res) => {
             console.log(res.data);
             console.log(old_data.concat(res.data).length);
-            if (old_data.concat(res.data).length===allLength){
-              isAll=true;
+            if (old_data.concat(res.data).length === allLength) {
+              isAll = true;
             }
-            allLength=old_data.concat(res.data).length;
+            allLength = old_data.concat(res.data).length;
             this.setData({
-              itemList:old_data.concat(res.data)
-            })
+              itemList: old_data.concat(res.data),
+            });
             // resolve(old_data.concat(res.data.data));
           });
       });
@@ -102,5 +105,27 @@ Page({
       userName: resl[0],
     });
     console.log("!!" + this.data.userID + this.data.userAvatar);
+  },
+  async like() {
+    let res = await addLike.addLike.addMethod(
+      "6cf53e9d63413019006937fb24b67c3d",
+      this.data.userID
+    );
+    console.log(res);
+    let res1 = await addComment.addComment.addMethod(
+      "6cf53e9d63413019006937fb24b67c3d",
+      this.data.userID,
+      "你好",
+      this.data.userName
+    );
+  },
+  async collect() {
+    let res = await addCollect.addCollect.addCollectMethod(
+      "6cf53e9d63413019006937fb24b67c3d",
+      this.data.userID,
+      "你好啊",
+      1
+    );
+    console.log(res);
   },
 });
