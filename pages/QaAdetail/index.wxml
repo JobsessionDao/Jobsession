@@ -40,7 +40,11 @@
 <view class="cyFooter">
     <view class="cyLike">
         <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_eye.png"></image>
+        <text>{{viewed}}</text>
     </view>
+
     <view class="cyTextArea">
+        <input 	value="发表回答"></input>
+        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/asdaf2.png"></image>
     </view>
 </view>
