@@ -5,6 +5,7 @@ page {
   
   .cyTopBar {
     position: fixed;
+    top: 0;
     left: 16rpx;
     width: 96%;
     height: 420rpx;
@@ -127,3 +128,10 @@ page {
     font-size: 13px;
     font-weight: 400;
   }
+
+  .cyTabBlock {
+    position: relative;
+    top: 450rpx;
+    width: 100%;
+    height: 25rpx;
+}

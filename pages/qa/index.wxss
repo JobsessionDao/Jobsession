@@ -1,19 +1,20 @@
 /* pages/QaA/QaA.wxss */
 page {
     background: rgba(250, 250, 250, 1);
-  }
-  
-  .cyTopBar {
+}
+
+.cyTopBar {
     position: fixed;
+    top: 0;
     left: 16rpx;
     width: 96%;
     height: 420rpx;
     z-index: 2;
     background-color: rgba(250, 250, 250, 1);
     border-bottom: 1px solid rgba(230, 231, 237, 1);
-  }
-  
-  .cyTopCircle {
+}
+
+.cyTopCircle {
     position: fixed;
     left: -63px;
     top: -270px;
@@ -22,27 +23,27 @@ page {
     opacity: 1;
     background: rgba(255, 87, 51, 0.51);
     filter: blur(80px);
-  }
-  
-  .cyTopBgtext {
+}
+
+.cyTopBgtext {
     position: fixed;
     left: -30rpx;
     top: 50rpx;
     width: 480rpx;
     height: 320rpx;
     opacity: 1;
-  }
-  
-  .cyTopBgiron {
+}
+
+.cyTopBgiron {
     position: fixed;
     left: 460rpx;
     top: 90rpx;
     width: 280rpx;
     height: 280rpx;
     opacity: 0.7;
-  }
-  
-  .cyTopText {
+}
+
+.cyTopText {
     position: fixed;
     margin: 0 40rpx 20rpx;
     padding: 0 0 20rpx;
@@ -50,9 +51,9 @@ page {
     font-size: 13px;
     font-weight: 700;
     color: rgba(255, 87, 51, 0.41);
-  }
-  
-  .cyBlogBlock {
+}
+
+.cyBlogBlock {
     position: relative;
     margin: auto;
     margin-top: 15rpx;
@@ -62,9 +63,9 @@ page {
     border-radius: 30rpx;
     background-color: rgb(255, 255, 255);
     box-sizing: border-box;
-  }
-  
-  .cyBlogTitle {
+}
+
+.cyBlogTitle {
     width: 98%;
     padding: 0 20rpx;
     border-left: 12rpx solid rgba(255, 87, 51, 0.51);
@@ -72,14 +73,14 @@ page {
     font-weight: 700;
     word-break: break-all;
     box-sizing: border-box;
-  }
-  
-  .cyFooter {
+}
+
+.cyFooter {
     display: flex;
     flex-flow: row;
-  }
-  
-  .cyBlockFooter1 {
+}
+
+.cyBlockFooter1 {
     margin-top: 30rpx;
     width: 120rpx;
     height: 50rpx;
@@ -88,24 +89,24 @@ page {
     display: flex;
     align-items: center;
     /* 垂直居中 */
-  }
-  
-  .cyBlockFooter1 text {
+}
+
+.cyBlockFooter1 text {
     display: block;
     margin-left: 8rpx;
     font-size: 12px;
     font-weight: 400;
     color: rgba(255, 87, 51, 1);
-  }
-  
-  .cyBlockFooter1 image {
+}
+
+.cyBlockFooter1 image {
     margin-left: 15rpx;
     width: 28rpx;
     height: 28rpx;
-  }
-  
-  
-  .cyBlockFooter2 {
+}
+
+
+.cyBlockFooter2 {
     position: absolute;
     right: 30rpx;
     margin-top: 30rpx;
@@ -113,16 +114,23 @@ page {
     height: 50rpx;
     display: flex;
     align-items: center;
-  }
-  
-  .cyBlockFooter2 image {
+}
+
+.cyBlockFooter2 image {
     margin-left: 15rpx;
     width: 35rpx;
     height: 35rpx;
-  }
-  
-  .cyBlockFooter2 text {
+}
+
+.cyBlockFooter2 text {
     margin-left: 15rpx;
     font-size: 13px;
     font-weight: 400;
-  }
+}
+
+.cyTabBlock {
+    position: relative;
+    top: 450rpx;
+    width: 100%;
+    height: 25rpx;
+}

@@ -1,0 +1,46 @@
+<!--pages/QaAdetail/QaAdetail.wxml-->
+<!-- TOPBAR -->
+<view class="cyTopBar">
+    <TapNav title="详情" backDelta="1" />
+    <view class="cyTopCircle"></view>
+    <image class="cyTopBgiron" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_message-fillet-unknown.png"></image>
+    <view class="cyTopTitle">{{title}}</view>
+    <view class="cyTopText">
+        <text>{{author}}</text>
+        <text>{{time}}</text>
+        <text class="cyQdetail">{{detail}}</text>
+    </view>
+</view>
+
+<view class="cyContent">
+    <view class="cyCommentsTitle">
+        <text>评论</text>
+    </view>
+
+    <view wx:for="{{cyAnswers}}" wx:for-item="Answers" wx:key="xxx">
+        <!-- 小卡片 -->
+        <view class="cyCommentsBlock">
+            <!-- 标题 -->
+            <view class="cyCommentsAuthor">
+                {{Answers.AnswerName}}
+            </view>
+
+            <view class="cyCommentsTime">
+                {{Answers.Atime}}
+            </view>
+
+            <view class="cyComments">
+                {{Answers.Answer}}
+            </view>
+        </view>
+    </view>
+    <view class="cyTabBlock"></view>
+</view>
+
+<view class="cyFooter">
+    <view class="cyLike">
+        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_eye.png"></image>
+    </view>
+    <view class="cyTextArea">
+    </view>
+</view>
