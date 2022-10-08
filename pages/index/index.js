@@ -6,6 +6,8 @@ let addArticle = require("../../utils/addArticle.js");
 let count;
 let db;
 let articleList;
+let allLength;
+let isAll=false;
 Page({
   data: {
     navHeight: 0,
@@ -22,16 +24,13 @@ Page({
     articleList = db.collection("articleList");
     count = await db.collection("articleList").count();
     this.fn();
-    this.loadMethod(1);
-    // this.setData({
-    //   itemList: await load.loadItems.loadMethod(1, this.data.itemList),
-    // });
+    this.loadMethod(2);
   },
   onLaunch: function () {
     // this.getMenuButtonBound();
   },
   onReachBottom:async function(){
-    this.loadMethod(1);
+    this.loadMethod(2);
   },
   async addme() {
     // let res=await addUser.addUser.addMethod(this.data.userName,this.data.userAvatar,this.data.userID)
@@ -68,7 +67,8 @@ Page({
   },
   loadMethod: async function (aType) {
     let old_data = this.data.itemList;
-    if (old_data.length === count) {
+    // console.log(old_data.length+"  "+count);
+    if (isAll) {
       return "到底了";
     } else {
       return new Promise((resolve, reject) => {
@@ -80,7 +80,11 @@ Page({
           .get()
           .then((res) => {
             console.log(res.data);
-            console.log(old_data.concat(res.data));
+            console.log(old_data.concat(res.data).length);
+            if (old_data.concat(res.data).length===allLength){
+              isAll=true;
+            }
+            allLength=old_data.concat(res.data).length;
             this.setData({
               itemList:old_data.concat(res.data)
             })
