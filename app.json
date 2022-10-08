@@ -1,11 +1,11 @@
 {
-    "pages": ["pages/Holland/index",
+    "pages": [
+        "pages/index/index",
+        "pages/Holland/index",
         "pages/HollandResult/index",
         "pages/HollandTest/index",
-        
         "pages/QaAdetail/index",
         "pages/EXPdetail/index",
-        "pages/index/index",
         "pages/experience/index",
         "pages/qa/index",
         "pages/my/index"
