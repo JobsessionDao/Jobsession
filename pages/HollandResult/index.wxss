@@ -21,12 +21,19 @@
 
 
 .container {
+    padding-bottom: 0;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
+.container image{
+    height: 380rpx;
+    width: 500rpx;
+}
+
 
 .cyKind {
     display: block;
@@ -44,7 +51,7 @@
 }
 
 .cyHoBotton{
-    margin-top: 200rpx;
+    margin-top: 120rpx;
     width: 65%;
     height: 100rpx;
     line-height: 100rpx;

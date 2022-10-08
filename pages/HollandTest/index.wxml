@@ -1,6 +1,6 @@
 <!--pages/HollandTest/index.wxml-->
 <goback1></goback1>
-<TapNav title="问题" backDelta="1" />
+<TapNav title="问题" backPath="../Holland/index" />
 <view class="cyBgLeft"></view>
 <view class="cyBgRight"></view>
 <view class="container">
