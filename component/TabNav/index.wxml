@@ -1,4 +1,4 @@
-<view style="position: fixed;top: 0;left: 0;width: 100%;background:{{navBgColor}};">
+<view style="position: fixed;top: 0;left: 0;width: 100%;background:{{navBgColor}};z-index:1000">
     <!-- 状态栏高度：这里需要一个空的view来占位，不然用line-height就跑偏了 -->
     <view style="height: {{stateHeight}}px"></view>
     <!-- 导航栏高度，这里转换为了rpx -->
