@@ -72,9 +72,30 @@ Component({
                     delta: this.properties.backDelta
                 })
             } else {
-                wx.redirectTo({
+                // wx.switchTab({
+                //     url: this.properties.backPath
+                // })
+                if(this.properties.backPath.indexOf('../my/')!=-1){
+                    wx.switchTab({
                     url: this.properties.backPath
-                })
+                 })
+                }else if(this.properties.backPath.indexOf('../index/')!=-1){
+                    wx.switchTab({
+                    url: this.properties.backPath
+                 })
+                }else if(this.properties.backPath.indexOf('../experience/')!=-1){
+                    wx.switchTab({
+                    url: this.properties.backPath
+                 })
+                }else if(this.properties.backPath.indexOf('../qa/')!=-1){
+                    wx.switchTab({
+                    url: this.properties.backPath
+                 })
+                }else{
+                    wx.redirectTo({
+                      url: this.properties.backPath,
+                    })
+                }
             }
             this.triggerEvent('backEvent', {}) // 可绑定点击返回时的事件
         }
