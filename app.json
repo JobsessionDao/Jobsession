@@ -1,8 +1,9 @@
 {
     "pages": [
+        "pages/index/index",
         "pages/QaAdetail/index",
         "pages/EXPdetail/index",
-        "pages/index/index",
+        
         "pages/experience/index",
         "pages/qa/index",
         "pages/my/index"

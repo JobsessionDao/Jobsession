@@ -1,12 +1,12 @@
-<view style="position: fixed;top: 0;left: 0;width: 100%;background:{{navBgColor}};z-index:1000">
+<view style="position: fixed;top: 0;left: 0;width: 100%;background:{{navBgColor}};backdrop-filter:blur(30px);z-index:100">
     <!-- 状态栏高度：这里需要一个空的view来占位，不然用line-height就跑偏了 -->
-    <view style="height: {{stateHeight}}px"></view>
+    <view style="height: {{stateHeight}}px;z-index: 100;"></view>
     <!-- 导航栏高度，这里转换为了rpx -->
-    <view style="height: {{navHeight}}px; line-height: {{navHeight}}px;display: flex; width: 100%;">
+    <view style="height: {{navHeight}}px; line-height: {{navHeight}}px;display: flex; width: 100%;z-index: 100;">
         <view style="width: 33%;" bindtap="navBack">
             <image style="height: 80rpx;width: 80rpx;margin-left: 20rpx;" src="../../images/icons/arrow-left.png" />
         </view>
-        <view style="width:33%;text-align: center;flex: 1;">{{title}}</view>
+        <view style="width:33%;text-align: center;flex: 1;z-index: 100;">{{title}}</view>
         <view style="width:33%;text-align: center;flex: 1;"></view>
     </view>
 </view>

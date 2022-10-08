@@ -1,5 +1,12 @@
 <!--index.wxml-->
-<view  class="container">
-  <TapNav title="详情" navBgColor="linear-gradient(90deg, rgba(0, 81, 255, 0.06) 0%, rgba(255, 87, 51, 0.04) 100%);" backDelta="1"/>
+
+<TapNav title="详情" navBgColor="#FBE5E1" backDelta="1" />
+
+
+<view class="container" style="position: relative;top:400rpx">
+ 
+  <view wx:for="{{itemList}}" wx:key="_id"> {{item.desc}} </view>
+  <button bindtap="login">登录</button>
   <button bindtap="addme">添加我的信息</button>
+
 </view>

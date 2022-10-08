@@ -8,7 +8,9 @@ let result=[];
 var getui = {
     getUserID: async function () {
         return new Promise((resolve, reject) => {
-            wx.getUserInfo({
+          
+          wx.getUserProfile({
+                desc: '用于完善会员资料',
                 //成功后会返回
                 success: (res) => {
                     console.log(res);
