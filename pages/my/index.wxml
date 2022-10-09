@@ -1,2 +1,38 @@
 <!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+
+<view class="Img" style="width: 704rpx; height: 1011rpx; display: block; box-sizing: border-box">
+    <view class="head"  style="width: 612rpx; height: 343rpx; position: relative; left: 46rpx; top: 39rpx; background-color: aqua; display: block; box-sizing: border-box">
+        <view class="face_and_name" style="background: rgba(122, 192, 145, 0.658); position: relative; left: 0rpx; top: 0rpx; width: 612rpx; height: 149rpx; display: block; box-sizing: border-box">
+            
+            <view class="user_name" style="overflow: hidden; font-size: 25rpx; text-overflow: ellipsis; word-wrap: break-word; white-space: nowrap; -webkit-line-clamp: 1; background: blue; width: 312rpx; height: 50rpx; display: -webkit-box; box-sizing: border-box; position: relative; left: 193rpx; top: 25rpx">{{Username}}</view>
+            <image src="{{touxiang}}" style=" width: 168rpx; height: 168rpx; border-radius: 50%;overflow:hidden;display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: -49rpx"></image>
+        </view>
+        
+        <view class ="number" style="width: 612rpx; height: 56rpx; display: block; box-sizing: border-box; position: relative; left: 0rpx; top: 24rpx">       
+            <view style="position: relative; left: 456rpx; top: 8rpx; width: 104rpx; height: 43rpx; display: block; box-sizing: border-box">{{Usre}}</view>
+            <view style="width: 104rpx; height: 41rpx; display: block; box-sizing: border-box; position: relative; left: 114rpx; top: -35rpx">{{Usre}}</view>
+             <view style="width: 104rpx; height: 43rpx; display: block; box-sizing: border-box; position: relative; left: 285rpx; top: -76rpx">{{Usre}}</view></view>
+
+<view class="down" style="position: relative; left: 0rpx; top: 24rpx; width: 612rpx; height: 79rpx; display: block; box-sizing: border-box">
+    <image src="https://i.imgtg.com/2022/10/08/pLjut.png" style="width: 58rpx; height: 41rpx; display: inline-block; box-sizing: border-box; position: relative; left: 102rpx; top: 20rpx"></image>
+
+    <image src="https://i.imgtg.com/2022/10/08/pGb6x.png" style="width: 58rpx; height: 41rpx; display: inline-block; box-sizing: border-box; position: relative; left: 220rpx; top: 20rpx"></image>
+
+    <image bindtap="collection" src="https://i.imgtg.com/2022/10/08/pGxbj.png" style="position: relative; left: 337rpx; top: 20rpx; width: 58rpx; height: 41rpx; display: inline-block; box-sizing: border-box"></image>
+</view>
+
+    
+</view>
+
+  <view class="Img1" style="position: relative; left: 90rpx; top: 39rpx; width: 522rpx; height: 320rpx; display: block; box-sizing: border-box">
+
+    <image bindtap="jump1" src="https://i.imgtg.com/2022/10/07/pvDMU.png" style="width: 202rpx; height: 93rpx; display: inline-block; box-sizing: border-box; position: relative; left: 22rpx; top: 33rpx"></image>
+
+    <image src="https://i.imgtg.com/2022/10/07/pv6zb.png" style="width: 202rpx; height: 93rpx; display: inline-block; box-sizing: border-box; position: relative; left: 87rpx; top: 33rpx"bindtap="jump2" ></image>
+    <image src="https://i.imgtg.com/2022/10/07/pv8Jl.png" style="width: 202rpx; height: 93rpx; display: inline-block; box-sizing: border-box; position: relative; left: 22rpx; top: 79rpx"bindtap="jump3"></image>
+
+    <image src="https://i.imgtg.com/2022/10/07/pyBPi.png" style="width: 202rpx; height: 93rpx; display: inline-block; box-sizing: border-box; position: relative; left: 87rpx; top: 79rpx"bindtap="jump4"></image>
+  </view>
+
+
+</view>

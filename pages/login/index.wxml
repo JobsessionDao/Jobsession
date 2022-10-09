@@ -1,0 +1,10 @@
+<!--pages/login/index.wxml-->
+<!-- <text>pages/login/index.wxml</text> -->
+<view class="total" style="background: aquamarine; width: 760rpx; height: 1391rpx; display: block; box-sizing: border-box">
+<view></view>
+
+<image src="https://i.imgtg.com/2022/10/08/p46zI.png" style="width: 454rpx; height: 426rpx; display: inline-block; box-sizing: border-box; position: relative; left: 153rpx; top: 271rpx"></image>
+<button bindtap="wxlogin" type="primary" style="position: relative; left: -1rpx; top: 491rpx; width: 454rpx; height: 112rpx; display: block; box-sizing: border-box; font-size: 45rpx">微信一键登录</button>
+<image src="https://i.imgtg.com/2022/10/08/p4IT6.png" style="width: 420rpx; height: 77rpx; display: inline-block; box-sizing: border-box; position: relative; left: 171rpx; top: 189rpx"></image>
+<image src="https://i.imgtg.com/2022/10/08/p4Cdb.png" style="width: 454rpx; height: 43rpx; display: inline-block; box-sizing: border-box; position: relative; left: 152rpx; top: 212rpx"></image>
+</view>

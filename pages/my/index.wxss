@@ -1,1 +1,8 @@
 /* pages/my/index.wxss */
+.Img{
+    width: 100px;
+    margin-left: 10px;
+    /* display: flex; */
+  
+  }
+  
