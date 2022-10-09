@@ -1,28 +1,28 @@
 <!--index.wxml-->
-<view class="cyTopBar">
+<view class="cyTopBar" >
   <view class="cyTopCircle"></view>
   <image class="cyTopBgtext" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/经验.png"></image>
   <image class="cyTopBgiron" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_lightbulb.png"></image>
   <view class="cyTopText">古人云：“见贤思齐焉”。无论是保研、考研、就业还是出国留学，前人的成功都是后人最好的借鉴。你就是榜样，请把你的经验分享给我们。</view>
 </view>
 
-<view wx:for="{{cyExperience}}" wx:for-item="experience"  wx:key="xxx">
+<view wx:for="{{itemList}}" wx:for-item="experience"  wx:key="xxx" >
   <!-- 小卡片 -->
-  <view class="cyBlogBlock">
+  <view class="cyBlogBlock" bindtap="goToDetail" data-item="{{experience}}">
     <!-- 标题 -->
     <view class="cyBlogTitle">
-    {{experience.title}}
+    {{experience.articleTitle}}
     </view>
     <view class="cyFooter">
       <!-- 左页脚 -->
       <view class="cyBlockFooter1">
         <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/分组 1.png"></image>
-        <text>{{experience.tag}}</text>
+        <text>{{experience.articleTag}}</text>
       </view>
       <!-- 右页脚 -->
       <view class="cyBlockFooter2">
         <image class="cyFooterIron2" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/点赞.png"></image>
-        <text>{{experience.like}}</text>
+        <text>{{experience.likeList.length}}</text>
       </view>
     </view>
   </view>
