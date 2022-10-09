@@ -2,20 +2,20 @@
 
 <!-- TOPBAR -->
 <view class="cyTopBar">
-    <TapNav title="详情" backDelta="1"/>
+    <TapNav title="详情" backDelta="1" />
     <view class="cyTopCircle"></view>
     <image class="cyTopBgiron" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_lightbulb.png"></image>
-    <view class="cyTopTitle">{{title}}</view>
+    <view class="cyTopTitle">{{item.articleTitle}}</view>
     <view class="cyTopText">
-        <text>{{author}}</text>
-        <text>{{time}}</text>
+        <text>{{item.anthor}}</text>
+        <text>{{item.time}}</text>
     </view>
 </view>
 
 <view class="cyContent">
-    <view class="cyContentText">{{ContentTest}}</view>
+    <view class="cyContentText">{{item.desc}}</view>
     <view class="cyImageList">
-        <view wx:for="{{imageList}}" wx:for-item="item" wx:key="xxx">
+        <view wx:for="{{item.imageList}}" wx:for-item="item" wx:key="xxx">
             <view class="cyContentImage">
                 <image src='{{item}}'></image>
             </view>
@@ -32,15 +32,15 @@
         <view class="cyCommentsBlock">
             <!-- 标题 -->
             <view class="cyCommentsAuthor">
-                {{Comments.CommentName}}
+                {{item.commentList.uesrName}}
             </view>
 
             <view class="cyCommentsTime">
-                {{Comments.Ctime}}
+                {{item.commentList.time}}
             </view>
 
             <view class="cyComments">
-                {{Comments.Comment}}
+                {{item.commentList.comment}}
             </view>
 
         </view>
@@ -52,7 +52,7 @@
 <view class="cyFooter">
     <view class="cyLike">
         <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_media-heart-03.png"></image>
-        <text>{{viewed}}</text>
+        <text>{{item.likeList.length}}</text>
     </view>
 
     <view class="cyTextArea">

@@ -7,23 +7,23 @@
 </view>
 
 
-<view wx:for="{{cyExperience}}" wx:for-item="experience" wx:key="xxx">
+<view wx:for="{{itemList}}" wx:for-item="experience" wx:key="xxx">
     <!-- 小卡片 -->
-    <view class="cyBlogBlock">
+    <view class="cyBlogBlock" bindtap="goToDetail" data-item="{{experience}}">
         <!-- 标题 -->
         <view class="cyBlogTitle">
-            {{experience.title}}
+            {{experience.articleTitle}}
         </view>
         <view class="cyFooter">
             <!-- 左页脚 -->
             <view class="cyBlockFooter1">
                 <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/分组 11.png"></image>
-                <text>{{experience.tag}}</text>
+                <text>{{experience.articleTag}}</text>
             </view>
             <!-- 右页脚 -->
             <view class="cyBlockFooter2">
                 <image class="cyFooterIron2" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/评论.png"></image>
-                <text>{{experience.like}}</text>
+                <text>{{experience.likeList.length}}</text>
             </view>
         </view>
     </view>
