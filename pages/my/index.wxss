@@ -1,8 +1,278 @@
-/* pages/my/index.wxss */
-.Img{
-    width: 100px;
-    margin-left: 10px;
-    /* display: flex; */
-  
-  }
-  
+page {
+  width: 100vw;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', 'Microsoft Yahei', sans-serif;
+}
+
+view,
+image,
+text {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.space-x-9>view:not(:first-child),
+.space-x-9>text:not(:first-child),
+.space-x-9>image:not(:first-child) {
+  margin-left: 17.31rpx;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.text {
+  color: #2b2b2b;
+  font-size: 42.31rpx;
+  font-family: SourceHanSansCN;
+  line-height: 34.62rpx;
+}
+
+.group_3 {
+  margin-top: 13.46rpx;
+  flex: 1 1 auto;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  padding: 171.15rpx 61.54rpx 176.92rpx;
+  /* background-color: #fafafa; */
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+.equal-division-item {
+  flex: 1 1 194.23rpx;
+  padding: 11.54rpx 0;
+}
+
+.space-y-10>view:not(:first-child),
+.space-y-10>text:not(:first-child),
+.space-y-10>image:not(:first-child) {
+  margin-top: 19.23rpx;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.font_2 {
+  font-size: 32.69rpx;
+  font-family: SourceHanSansCN;
+  line-height: 25rpx;
+  color: #333333;
+}
+
+.font_3 {
+  font-size: 23.08rpx;
+  font-family: SourceHanSansCN;
+  line-height: 22.12rpx;
+  color: #7e7e7e;
+}
+
+.text_6 {
+  font-size: 24.04rpx;
+}
+
+.grid-item {
+  border-radius: 19.23rpx;
+  width: 288.46rpx;
+  height: 140.38rpx;
+}
+
+.group_4 {
+  margin-top: 48.08rpx;
+  padding-left: 11.54rpx;
+  padding-right: 7.69rpx;
+}
+
+.image {
+  flex-shrink: 0;
+  width: 121.15rpx;
+  height: 121.15rpx;
+}
+
+.text_2 {
+  border-bottom: 20rpx solid rgba(61, 97, 255, 0.51);
+}
+
+.grid {
+  margin-top: 50rpx;
+  height: 296.15rpx;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 17.31rpx;
+  column-gap: 30.77rpx;
+}
+
+.group_5 {
+  margin-top: 588.46rpx;
+}
+
+.space-y-4>view:not(:first-child),
+.space-y-4>text:not(:first-child),
+.space-y-4>image:not(:first-child) {
+  margin-top: 7.69rpx;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.text_7 {
+  line-height: 26.92rpx;
+}
+
+.font_4 {
+  font-size: 23.08rpx;
+  font-family: SourceHanSansCN;
+  line-height: 25rpx;
+  color: #b5b5b5;
+}
+
+.text {
+  color: #2b2b2b;
+  font-size: 42.31rpx;
+  font-family: SourceHanSansCN;
+  line-height: 34.62rpx;
+}
+
+.text-wrapper_2 {
+  padding: 11.54rpx 0 13.46rpx;
+  background-color: #0051ff1a;
+  border-radius: 38.46rpx;
+  width: 100rpx;
+  height: 46.15rpx;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.text_4 {
+  line-height: 21.15rpx;
+}
+
+.font_1 {
+  font-size: 23.08rpx;
+  font-family: HarmonyOSSansSC;
+  line-height: 22.12rpx;
+  color: #0051ff;
+}
+
+.text-wrapper {
+  padding: 11.54rpx 0 13.46rpx;
+  background-color: #0051ff1a;
+  border-radius: 38.46rpx;
+  height: 46.15rpx;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-wrapper_3 {
+  padding: 11.54rpx 0 13.46rpx;
+  background-color: #0051ff1a;
+  border-radius: 38.46rpx;
+  width: 107.69rpx;
+  height: 46.15rpx;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.space-x-7>view:not(:first-child),
+.space-x-7>text:not(:first-child),
+.space-x-7>image:not(:first-child) {
+  margin-left: 13.46rpx;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}

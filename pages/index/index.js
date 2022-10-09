@@ -38,11 +38,11 @@ Page({
   async addme() {
     // let res=await addUser.addUser.addMethod(this.data.userName,this.data.userAvatar,this.data.userID)
     let res = await addArticle.addArticle.addMethod(
-      "你好",
+      "你好这时符合度额而成的让你焦虑回复俄方和服",
       "校招",
-      "这是一段dddd",
-      2,
-      [],
+      "这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章这是一篇文章",
+      1,
+      ["https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/20221008104535.png","https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/1665035307457.png"],
       this.data.userName,
       this.data.userID,
       this.data.userAvatar

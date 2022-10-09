@@ -1,1 +1,26 @@
 /* Jobsession/pages/login/index.wxss */
+.headText{
+    font-size: 30rpx;
+    margin: 0 auto;
+}
+.cyBgLeft {
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: blur(80rpx);
+    width: 600rpx;
+    height: 400rpx;
+    z-index: -1;
+    background-color: rgba(78, 115, 255, 0.36);
+}
+
+.cyBgRight {
+    position: fixed;
+    top: 100rpx;
+    right: 0;
+    filter: blur(80rpx);
+    width: 600rpx;
+    height: 400rpx;
+    z-index: -1;
+    background-color: rgba(255, 87, 51, 0.16);
+}

@@ -1,13 +1,19 @@
 <!--pages/login/index.wxml-->
 <!-- <text>pages/login/index.wxml</text> -->
-<view class="total" style="width: 760rpx; height: 1391rpx; display: block; box-sizing: border-box">
-<view style="background-color: 4E73FF;"></view>
 
-<image src="https://i.imgtg.com/2022/10/08/p46zI.png" style="width: 454rpx; height: 426rpx; display: inline-block; box-sizing: border-box; position: relative; left: 153rpx; top: 410rpx"></image>
-<button bindtap="wxlogin" type="primary" style="position: relative; left: 0rpx; top: 633rpx; width: 454rpx; height: 112rpx; display: block; box-sizing: border-box; font-size: 45rpx">微信一键登录</button>
-<image src="https://i.imgtg.com/2022/10/08/p4IT6.png" style="width: 420rpx; height: 77rpx; display: inline-block; box-sizing: border-box; position: relative; left: 171rpx; top: 324rpx"></image>
-<image src="https://i.imgtg.com/2022/10/08/p4Cdb.png" style="width: 454rpx; height: 43rpx; display: inline-block; box-sizing: border-box; position: relative; left: 153rpx; top: 362rpx"></image>
-<view class="background_color" style=" width: 760rpx; height: 774rpx; display: block; box-sizing: content-box"><image src="https://i.imgtg.com/2022/10/09/pdYbg.png" style="position: relative; left: 22rpx; top: -776rpx; width: 718rpx; height: 539rpx; display: inline-block; box-sizing: border-box"></image>
-<image src="https://i.imgtg.com/2022/10/09/pdfmB.png" style="position: relative; left: -133rpx; top: -1402rpx; width: 789rpx; height: 699rpx; display: inline-block; box-sizing: border-box"></image>
+<view class="cyBgLeft"></view>
+<view class="cyBgRight"></view>
+
+<view style="width: 100%;display: flex;justify-content: center;align-items: center;margin-top: 50%;">
+    <image src="https://i.imgtg.com/2022/10/08/p46zI.png" style="width: 500rpx;margin:0 auto"></image>
 </view>
+<view style="width: 100%;display: flex;justify-content: center;align-items: center;text-align: center;">
+    <view style="width: 100%;margin: 0 auto;font-size: 68rpx;font-weight: 900;margin-top: 20rpx;margin-bottom: 20rpx;">职念生涯规划社区</view>
+</view>
+<view style="width: 100%;display: flex;justify-content: center;align-items: center;text-align: center;">
+    <view style="width: 100%;margin: 0 auto;font-size: 36rpx;font-weight: 300;margin-bottom: 20rpx;letter-spacing: 13px;">收获经验 成为榜样</view>
+</view>
+<button bindtap="wxlogin" type="primary" style="box-sizing: border-box; font-size: 38rpx;background: rgba(86, 125, 244, 0.1);color:rgba(61, 97, 255, 1);height: 100rpx;width: 550rpx;border-radius: 20rpx;text-align: center;display: flex;justify-content: center;align-items: center;">{{buttonTitle}}</button>
+<view style="margin-top:20rpx;width: 100%;display: flex;justify-content: center;align-items: center;text-align: center;">
+    <view style="width: 100%;margin: 0 auto;font-size: 22rpx;font-weight: 600;margin-bottom: 20rpx;">登录即代表同意职念生涯规划社区用户协议</view>
 </view>
