@@ -1,10 +1,13 @@
 <!--pages/login/index.wxml-->
 <!-- <text>pages/login/index.wxml</text> -->
-<view class="total" style="background: aquamarine; width: 760rpx; height: 1391rpx; display: block; box-sizing: border-box">
-<view></view>
+<view class="total" style="width: 760rpx; height: 1391rpx; display: block; box-sizing: border-box">
+<view style="background-color: 4E73FF;"></view>
 
-<image src="https://i.imgtg.com/2022/10/08/p46zI.png" style="width: 454rpx; height: 426rpx; display: inline-block; box-sizing: border-box; position: relative; left: 153rpx; top: 271rpx"></image>
-<button bindtap="wxlogin" type="primary" style="position: relative; left: -1rpx; top: 491rpx; width: 454rpx; height: 112rpx; display: block; box-sizing: border-box; font-size: 45rpx">微信一键登录</button>
-<image src="https://i.imgtg.com/2022/10/08/p4IT6.png" style="width: 420rpx; height: 77rpx; display: inline-block; box-sizing: border-box; position: relative; left: 171rpx; top: 189rpx"></image>
-<image src="https://i.imgtg.com/2022/10/08/p4Cdb.png" style="width: 454rpx; height: 43rpx; display: inline-block; box-sizing: border-box; position: relative; left: 152rpx; top: 212rpx"></image>
+<image src="https://i.imgtg.com/2022/10/08/p46zI.png" style="width: 454rpx; height: 426rpx; display: inline-block; box-sizing: border-box; position: relative; left: 153rpx; top: 410rpx"></image>
+<button bindtap="wxlogin" type="primary" style="position: relative; left: 0rpx; top: 633rpx; width: 454rpx; height: 112rpx; display: block; box-sizing: border-box; font-size: 45rpx">微信一键登录</button>
+<image src="https://i.imgtg.com/2022/10/08/p4IT6.png" style="width: 420rpx; height: 77rpx; display: inline-block; box-sizing: border-box; position: relative; left: 171rpx; top: 324rpx"></image>
+<image src="https://i.imgtg.com/2022/10/08/p4Cdb.png" style="width: 454rpx; height: 43rpx; display: inline-block; box-sizing: border-box; position: relative; left: 153rpx; top: 362rpx"></image>
+<view class="background_color" style=" width: 760rpx; height: 774rpx; display: block; box-sizing: content-box"><image src="https://i.imgtg.com/2022/10/09/pdYbg.png" style="position: relative; left: 22rpx; top: -776rpx; width: 718rpx; height: 539rpx; display: inline-block; box-sizing: border-box"></image>
+<image src="https://i.imgtg.com/2022/10/09/pdfmB.png" style="position: relative; left: -133rpx; top: -1402rpx; width: 789rpx; height: 699rpx; display: inline-block; box-sizing: border-box"></image>
+</view>
 </view>

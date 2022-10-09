@@ -1,10 +1,10 @@
 <!--pages/my/index.wxml-->
 
 <view class="Img" style="width: 704rpx; height: 1011rpx; display: block; box-sizing: border-box">
-    <view class="head"  style="width: 612rpx; height: 343rpx; position: relative; left: 46rpx; top: 39rpx; background-color: aqua; display: block; box-sizing: border-box">
-        <view class="face_and_name" style="background: rgba(122, 192, 145, 0.658); position: relative; left: 0rpx; top: 0rpx; width: 612rpx; height: 149rpx; display: block; box-sizing: border-box">
+    <view class="head"  style="width: 612rpx; height: 343rpx; position: relative; left: 46rpx; top: 39rpx;  display: block; box-sizing: border-box">
+        <view class="face_and_name" style=" position: relative; left: 0rpx; top: 0rpx; width: 612rpx; height: 149rpx; display: block; box-sizing: border-box">
             
-            <view class="user_name" style="overflow: hidden; font-size: 25rpx; text-overflow: ellipsis; word-wrap: break-word; white-space: nowrap; -webkit-line-clamp: 1; background: blue; width: 312rpx; height: 50rpx; display: -webkit-box; box-sizing: border-box; position: relative; left: 193rpx; top: 25rpx">{{Username}}</view>
+            <view class="user_name" style="overflow: hidden; font-size: 25rpx; text-overflow: ellipsis; word-wrap: break-word; white-space: nowrap; -webkit-line-clamp: 1;  width: 312rpx; height: 50rpx; display: -webkit-box; box-sizing: border-box; position: relative; left: 193rpx; top: 25rpx">{{Username}}</view>
             <image src="{{touxiang}}" style=" width: 168rpx; height: 168rpx; border-radius: 50%;overflow:hidden;display: inline-block; box-sizing: border-box; position: relative; left: 0rpx; top: -49rpx"></image>
         </view>
         
@@ -34,5 +34,7 @@
     <image src="https://i.imgtg.com/2022/10/07/pyBPi.png" style="width: 202rpx; height: 93rpx; display: inline-block; box-sizing: border-box; position: relative; left: 87rpx; top: 79rpx"bindtap="jump4"></image>
   </view>
 
-
+  <view class="background_color" style=" width: 760rpx; height: 774rpx; display: block; box-sizing: content-box"><image src="https://i.imgtg.com/2022/10/09/pdYbg.png" style="position: relative; left: 22rpx; top: -776rpx; width: 718rpx; height: 539rpx; display: inline-block; box-sizing: border-box"></image>
+<image src="https://i.imgtg.com/2022/10/09/pdfmB.png" style="position: relative; left: -133rpx; top: -1402rpx; width: 789rpx; height: 699rpx; display: inline-block; box-sizing: border-box"></image>
+</view>
 </view>
