@@ -73,7 +73,9 @@ text {
   color: #2b2b2b;
   font-size: 42.31rpx;
   font-family: SourceHanSansCN;
-  line-height: 34.62rpx;
+  line-height: 88.62rpx;
+  display: flex;
+  justify-content: center;
 }
 
 .group_3 {
@@ -139,7 +141,7 @@ text {
 
 .grid-item {
   border-radius: 19.23rpx;
-  width: 288.46rpx;
+  width: 289.46rpx;
   height: 140.38rpx;
 }
 
@@ -151,12 +153,21 @@ text {
 
 .image {
   flex-shrink: 0;
-  width: 121.15rpx;
-  height: 121.15rpx;
+  width: 130.15rpx;
+  height: 130.15rpx;
 }
 
 .text_2 {
+  
   border-bottom: 20rpx solid rgba(61, 97, 255, 0.51);
+}
+
+.tt2 {
+  position: relative;
+  top: 15rpx;
+  font-size: 25rpx;
+  font-weight: 400;
+  line-height: 30rpx;
 }
 
 .grid {
@@ -198,12 +209,7 @@ text {
   color: #b5b5b5;
 }
 
-.text {
-  color: #2b2b2b;
-  font-size: 42.31rpx;
-  font-family: SourceHanSansCN;
-  line-height: 34.62rpx;
-}
+
 
 .text-wrapper_2 {
   padding: 11.54rpx 0 13.46rpx;
@@ -275,4 +281,28 @@ text {
 .flex-row {
   display: flex;
   flex-direction: row;
+}
+
+.text {
+  color: #2b2b2b;
+  font-size: 36.31rpx;
+  font-family: SourceHanSansCN;
+  line-height: 98.62rpx;
+}
+
+.group_2 {
+  padding: 0 7.69rpx;
+}
+.space-x-10 > view:not(:first-child),
+.space-x-10 > text:not(:first-child),
+.space-x-10 > image:not(:first-child) {
+  margin-left: 22.23rpx;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.group_dd{
+  margin-top: -18rpx !important;
 }

@@ -46,9 +46,9 @@
     "libVersion": "2.26.0",
     "appid": "wx9b0cc3d86ccee149",
     "projectname": "jobsession",
-    "condition": {},
     "editorSetting": {
         "tabIndent": "insertSpaces",
         "tabSize": 4
-    }
+    },
+    "condition": {}
 }

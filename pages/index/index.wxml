@@ -1,6 +1,6 @@
-<!--index.wxml-->
+<!-- index.wxml -->
+<!-- <TapNav title="详情" navBgColor="#FBE5E1" backDelta="1" />
 
-<TapNav title="详情" navBgColor="#FBE5E1" backDelta="1" />
 
 
 <view class="container" style="position: relative;top:400rpx">
@@ -10,4 +10,44 @@
   <button bindtap="collect">收藏</button>
   <view wx:for="{{itemList}}" style="margin-top: 100rpx;" wx:key="_id"> {{item.desc}} </view>
 
+</view> -->
+<view class="cyBgLeft_g"></view>
+<view class="cyBgRight_g"></view>
+<view class="mainpage">
+  <view style="position: absolute;top: 0;left: 0;width: 100%;background:{{navBgColor}};z-index:100">
+    <!-- 状态栏高度：这里需要一个空的view来占位，不然用line-height就跑偏了 -->
+    <view style="height: {{stateHeight}}px;z-index: 100;"></view>
+    <!-- 导航栏高度，这里转换为了rpx -->
+    <view style="height: {{navHeight}}px; line-height: {{navHeight}}px;display: flex; width: 100%;z-index: 100;">
+      <view style="width: 33%;">
+        <image style="height: 70rpx;width: 70rpx;margin-left: 20rpx;opacity:0.5" src="../../images/icons/search.png" />
+      </view>
+      <view style="width:33%;text-align: center;flex: 1;z-index: 100;"></view>
+      <view style="width:33%;text-align: center;flex: 1;"></view>
+    </view>
+  </view>
+  <view style="margin-top: 210rpx;">
+    <view class="cyCommentsTitle" bindtap="addLike">
+      <text>热门经验</text>
+    </view>
+    <view wx:for="{{itemList}}" wx:for-item="experience" wx:key="xxx">
+      <!-- 小卡片 -->
+      <view class="cyBlogBlock" bindtap="goToDetail" data-item="{{experience}}">
+        <!-- 标题 -->
+        <view class="cyBlogTitle">{{experience.articleTitle}}</view>
+        <view class="cyFooter">
+          <!-- 左页脚 -->
+          <view class="cyBlockFooter1">
+            <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/分组 1.png"></image>
+            <text>{{experience.articleTag}}</text>
+          </view>
+          <!-- 右页脚 -->
+          <view class="cyBlockFooter2">
+            <image class="cyFooterIron2" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/点赞.png"></image>
+            <text>{{experience.likeList.length}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

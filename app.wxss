@@ -12,7 +12,7 @@
 
 .cyBgLeft_g {
   position: fixed;
-  top: 0;
+  top: -100rpx;
   left: 0;
   filter: blur(80rpx);
   width: 600rpx;
@@ -23,7 +23,7 @@
 
 .cyBgRight_g {
   position: fixed;
-  top: 100rpx;
+  top: -100rpx;
   right: 0;
   filter: blur(80rpx);
   width: 600rpx;

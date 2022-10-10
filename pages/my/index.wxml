@@ -8,10 +8,12 @@
         <text class="text">swfoodt</text>
         <view class="flex-col items-start group_3">
           <view class="section"></view>
-          <text class="text_2">退出登录</text>
+          <text class="text_2">
+            <text class="tt2">退出登录</text>
+          </text>
         </view>
       </view>
-      <view class="flex-row justify-center space-x-7">
+      <view class="flex-row justify-center space-x-7 group_dd">
         <view class="flex-col text-wrapper">
           <text class="font_1 text_3">计算机科学与技术</text>
         </view>
