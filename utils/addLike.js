@@ -27,6 +27,7 @@ var addLike = {
             userList.doc(articleId).update({
               data: {
                 likeList: db.command.pull(userId),
+                number: db.command.inc(-1),
               },
               success: function (res) {
                 console.log("取消点赞成功");
@@ -41,6 +42,7 @@ var addLike = {
             userList.doc(articleId).update({
               data: {
                 likeList: db.command.push(userId),
+                number: db.command.inc(1),
               },
               success: function (res) {
                 console.log("点赞成功");

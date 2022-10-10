@@ -21,7 +21,7 @@ Page({
     userAvatar: "",
     userName: "",
     itemList: [],
-
+    itemList_2:[],
     navHeight: 0,
     top: 0,
     stateHeight: 0,
@@ -34,6 +34,7 @@ Page({
     count = await db.collection("articleList").count();
     this.fn();
     this.loadMethod(1);
+    this.loadMethod_2(2);
   },
   topnav() {
     let stateHeight = 0; //  接收状态栏高度
@@ -55,9 +56,9 @@ Page({
   onLaunch: function () {
     // this.getMenuButtonBound();
   },
-  onReachBottom: async function () {
-    this.loadMethod(1);
-  },
+  // onReachBottom: async function () {
+  //   this.loadMethod(1);
+  // },
   async addme() {
     // let res=await addUser.addUser.addMethod(this.data.userName,this.data.userAvatar,this.data.userID)
     let res = await addArticle.addArticle.addMethod(
@@ -104,14 +105,42 @@ Page({
         // 筛选 articleList 数据表中字段 number 大于 40 的数据,只选出前3条，不进行分页加载
         articleList
           .where({
-            number: db.command.gt(1),
+            type:aType,
+            number: db.command.gte(1),
           })
           .limit(3)
           .orderBy("number", "desc")
           .get({
             success: (res) => {
               this.setData({
-                itemList: res,
+                itemList: res.data,
+              });
+              console.log(res);
+              resolve("加载成功");
+            },
+          });
+      });
+    }
+  },
+  loadMethod_2: async function (aType) {
+    let old_data = this.data.itemList;
+    // console.log(old_data.length+"  "+count);
+    if (isAll) {
+      return "到底了";
+    } else {
+      return new Promise((resolve, reject) => {
+        // 筛选 articleList 数据表中字段 number 大于 40 的数据,只选出前3条，不进行分页加载
+        articleList
+          .where({
+            type:aType,
+            number: db.command.gte(1),
+          })
+          .limit(3)
+          .orderBy("number", "desc")
+          .get({
+            success: (res) => {
+              this.setData({
+                itemList_2: res.data,
               });
               console.log(res);
               resolve("加载成功");
@@ -159,4 +188,16 @@ Page({
     );
     console.log(res);
   },
+  onPullDownRefresh:function(){
+    var that =this;
+    wx.showNavigationBarLoading();
+    setTimeout(function () {
+      that.loadMethod(1);
+      
+      wx.hideNavigationBarLoading();
+      //停止下拉刷新
+      wx.stopPullDownRefresh();
+    }, 2000);
+  },
+
 });

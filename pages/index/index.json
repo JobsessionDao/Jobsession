@@ -2,5 +2,6 @@
   "usingComponents": {
     "TapNav":"../../component/TabNav/index"
   },
-  "navigationStyle": "custom"
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true
 }
