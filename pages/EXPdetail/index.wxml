@@ -50,9 +50,9 @@
 
 
 <view class="cyFooter">
-    <view class="cyLike">
+    <view class="cyLike" bindtap="praise">
         <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_media-heart-03.png"></image>
-        <text>{{item.likeList.length}}</text>
+        <text>{{likeNum}}</text>
     </view>
 
     <view class="cyTextArea">
