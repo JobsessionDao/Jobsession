@@ -1,7 +1,8 @@
 // pages/login/index.js
 let getUserID = require("../../utils/getUserID.js");
 let addUser = require("../../utils/addUser.js");
-
+//  使用 globalData
+let app = getApp();
 Page({
   /**
    * 页面的初始数据
@@ -73,6 +74,8 @@ Page({
           userAvatar: res.data[1],
           userName: res.data[0],
         });
+        // 为 app.globalData.userInfo 赋值
+        getApp().globalData.userInfo = res.data;
       },
       fail: function (res) {
         console.log("读取失败");

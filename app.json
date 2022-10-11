@@ -1,57 +1,63 @@
 {
-    "pages": [
-        "pages/login/index",
-        "pages/index/index",
-        "pages/Holland/index",
-        "pages/HollandResult/index",
-        "pages/HollandTest/index",
-        "pages/QaAdetail/index",
-        "pages/EXPdetail/index",
-        "pages/experience/index",
-        "pages/qa/index",
-        "pages/my/index"
-    ],
-    "window": {
-        "navigationStyle": "custom",
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "Weixin",
-        "navigationBarTextStyle": "black"
-    },
-    "tabBar": {
-        "color": "#000000",
-        "backgroundColor": "#ffffff",
-        "borderStyle": "black",
-        "selectedColor": "#3D61FF",
-        "list": [{
-                "pagePath": "pages/index/index",
-                "text": "首页",
-                "iconPath": "images/icons/home_before.png",
-                "selectedIconPath": "images/icons/home_after.png"
+  "pages": [
+    "pages/login/index",
+    "pages/index/index",
+    "pages/aim/index",
 
-            },
-            {
-                "pagePath": "pages/experience/index",
-                "text": "经验",
-                "iconPath": "images/icons/expe_before.png",
-                "selectedIconPath": "images/icons/expe_after.png"
-            },
-            {
-                "pagePath": "pages/qa/index",
-                "text": "问答",
-                "iconPath": "images/icons/qa_before.png",
-                "selectedIconPath": "images/icons/qa_after.png"
-            },
-            {
-                "pagePath": "pages/my/index",
-                "text": "我的",
-                "iconPath": "images/icons/my_before.png",
-                "selectedIconPath": "images/icons/my_after.png"
-            }
-        ],
-        "position": "bottom",
-        "custom": false
-    },
-    "style": "v2",
-    "sitemapLocation": "sitemap.json"
+    "pages/search/index",
+
+    "pages/Holland/index",
+    "pages/HollandResult/index",
+    "pages/HollandTest/index",
+    "pages/QaAdetail/index",
+    "pages/EXPdetail/index",
+    "pages/experience/index",
+    "pages/qa/index",
+    "pages/my/index",
+
+    "pages/changeaim/index"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "selectedColor": "#3D61FF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/icons/home_before.png",
+        "selectedIconPath": "images/icons/home_after.png"
+      },
+      {
+        "pagePath": "pages/experience/index",
+        "text": "经验",
+        "iconPath": "images/icons/expe_before.png",
+        "selectedIconPath": "images/icons/expe_after.png"
+      },
+      {
+        "pagePath": "pages/qa/index",
+        "text": "问答",
+        "iconPath": "images/icons/qa_before.png",
+        "selectedIconPath": "images/icons/qa_after.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "images/icons/my_before.png",
+        "selectedIconPath": "images/icons/my_after.png"
+      }
+    ],
+    "position": "bottom",
+    "custom": false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
 }

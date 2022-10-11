@@ -21,7 +21,7 @@ Page({
     userAvatar: "",
     userName: "",
     itemList: [],
-    itemList_2:[],
+    itemList_2: [],
     navHeight: 0,
     top: 0,
     stateHeight: 0,
@@ -105,7 +105,7 @@ Page({
         // 筛选 articleList 数据表中字段 number 大于 40 的数据,只选出前3条，不进行分页加载
         articleList
           .where({
-            type:aType,
+            type: aType,
             number: db.command.gte(1),
           })
           .limit(3)
@@ -132,7 +132,7 @@ Page({
         // 筛选 articleList 数据表中字段 number 大于 40 的数据,只选出前3条，不进行分页加载
         articleList
           .where({
-            type:aType,
+            type: aType,
             number: db.command.gte(1),
           })
           .limit(3)
@@ -188,16 +188,34 @@ Page({
     );
     console.log(res);
   },
-  onPullDownRefresh:function(){
-    var that =this;
+  onPullDownRefresh: function () {
+    var that = this;
     wx.showNavigationBarLoading();
     setTimeout(function () {
       that.loadMethod(1);
-      
+
       wx.hideNavigationBarLoading();
       //停止下拉刷新
       wx.stopPullDownRefresh();
     }, 2000);
   },
-
+  gotosh: function () {
+    wx.navigateTo({
+      url: "../search/index",
+    });
+  },
+  goToDetail1: function (e) {
+    let item = e.currentTarget.dataset.item;
+    console.log(item);
+    wx.navigateTo({
+      url: "/pages/EXPdetail/index?data=" + JSON.stringify(item),
+    });
+  },
+  goToDetail2: function (e) {
+    let item = e.currentTarget.dataset.item;
+    console.log(item);
+    wx.navigateTo({
+      url: "/pages/QaAdetail/index?data=" + JSON.stringify(item),
+    });
+  },
 });

@@ -1,0 +1,42 @@
+<TapNav title="" backDelta="1" />
+<view>
+  <view class="cyTopCircle"></view>
+  <view class="cyTopCircle1"></view>
+  <!-- 背景图片 -->
+  <view class="group0">
+    <image style='width:400rpx;height:400rpx;z-index:10' src="https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/goal-backg.png" />
+  </view>
+  <!-- 标题 -->
+  <view class="group1">
+    <text class="text1">阶段性目标</text>
+  </view>
+  <!-- 目标 -->
+  <view class="group2">
+    <text class="text2">{{myAim.aimTitle}}</text>
+  </view>
+  <view class="group2">
+    <text class="text3">{{myAim.aimDesc}}</text>
+  </view>
+  <view class="group2">
+    <text class="text3">{{starttime}}-{{endtime}}</text>
+  </view>
+  <!-- 倒计时 -->
+  <view class="group3" bindtap="Timecountdown">
+    <text class="text5">{{day}}天\n</text>
+  </view>
+  <view class="group3">
+    <text class="text6">{{hour}}时\n</text>
+  </view>
+  <view class="group3">
+    <text class="text5">{{min}}分\n</text>
+  </view>
+  <view class="group3">
+    <text class="text6">{{sec}}秒\n</text>
+  </view>
+  <!-- 修改按钮 跳转到设置页面 -->
+  <view class="group4">
+    <button bindtap="gotoPage" class="btn1">
+      <view>修改目标</view>
+    </button>
+  </view>
+</view>

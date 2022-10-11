@@ -2,18 +2,18 @@
 <view class="cyBgRight_g"></view>
 <view class="flex-col page">
   <view class="flex-row space-x-9">
-    <image class="image" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311404946478376.png" />
+    <image class="image" src="{{userInfo[1]}}" />
     <view class="flex-col space-y-10 group">
       <view class="flex-row space-x-10 group_2">
-        <text class="text">swfoodt</text>
+        <text class="text">{{userInfo[0]}}</text>
         <view class="flex-col items-start group_3">
           <view class="section"></view>
-          <text class="text_2">
+          <text class="text_2" bindtap="exit">
             <text class="tt2">退出登录</text>
           </text>
         </view>
       </view>
-      <view class="flex-row justify-center space-x-7 group_dd">
+      <!-- <view class="flex-row justify-center space-x-7 group_dd">
         <view class="flex-col text-wrapper">
           <text class="font_1 text_3">计算机科学与技术</text>
         </view>
@@ -23,30 +23,38 @@
         <view class="flex-col items-center text-wrapper_3">
           <text class="font_1 text_5">2020级</text>
         </view>
-      </view>
+      </view> -->
     </view>
   </view>
   <view class="flex-col group_4">
     <view class="flex-row equal-division">
       <view class="flex-col items-center space-y-10 equal-division-item">
-        <text class="font_2">1000</text>
+        <text class="font_2">{{expCre}}</text>
         <text class="font_3 text_6">经验</text>
       </view>
       <view class="flex-col items-center space-y-10 equal-division-item">
-        <text class="font_2">566</text>
+        <text class="font_2">{{likeCre}}</text>
         <text class="font_3 text_6">赞赏</text>
       </view>
       <view class="flex-col items-center space-y-10 equal-division-item">
-        <text class="font_2">10</text>
+        <text class="font_2">{{collectNum}}</text>
         <text class="font_3 text_6">收藏</text>
       </view>
     </view>
     <view class="divider"></view>
     <view class="grid">
-      <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405005081466.png" />
-      <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405120826436.png" />
-      <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405076982188.png" />
-      <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405096133013.png" />
+      <view>
+        <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405005081466.png" />
+      </view>
+      <view>
+        <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405120826436.png" />
+      </view>
+      <view bindtap="goholland">
+        <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405076982188.png" />
+      </view>
+      <view bindtap="goaim">
+        <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405096133013.png" />
+      </view>
     </view>
   </view>
   <view class="flex-col items-center space-y-4 group_5">

@@ -155,10 +155,11 @@ text {
   flex-shrink: 0;
   width: 130.15rpx;
   height: 130.15rpx;
+  border-radius: 100%;
 }
 
 .text_2 {
-  
+
   border-bottom: 20rpx solid rgba(61, 97, 255, 0.51);
 }
 
@@ -293,16 +294,18 @@ text {
 .group_2 {
   padding: 0 7.69rpx;
 }
-.space-x-10 > view:not(:first-child),
-.space-x-10 > text:not(:first-child),
-.space-x-10 > image:not(:first-child) {
+
+.space-x-10>view:not(:first-child),
+.space-x-10>text:not(:first-child),
+.space-x-10>image:not(:first-child) {
   margin-left: 22.23rpx;
 }
+
 .flex-row {
   display: flex;
   flex-direction: row;
 }
 
-.group_dd{
+.group_dd {
   margin-top: -18rpx !important;
 }

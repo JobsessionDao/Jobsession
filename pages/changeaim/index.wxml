@@ -1,0 +1,53 @@
+<!-- pages/goal1/index.wxml -->
+<TapNav title="" backDelta="1" />
+<view class="group3">
+  <!-- 背景颜色 -->
+  <view class="cyTopCircle"></view>
+  <view class="cyTopCircle1"></view>
+  <!-- 背景图片 -->
+  <view class="group0">
+    <image style='width:400rpx;height:400rpx;z-index:10' src="https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/goal-backg.png" />
+  </view>
+  <!-- 填写信息 -->
+  <view class="group1">
+    <text class="text1">填写</text>
+  </view>
+  <!-- 填写目标的两个信息 -->
+  <view class="group5" style="position: relative; left: 175rpx; ">
+    <image class="InpImg" src="../../images/icons/title.png" />
+    <input bindinput='getInputValue' name='value' type='text' placeholder="填写目标标题" placeholder-class="input-placeholder" />
+  </view>
+  <!-- 填写目标的具体描述 -->
+  <view class="group5" style="position: relative; left: 175rpx; ">
+    <image class="InpImg" src="../../images/icons/goal.png" />
+    <input bindinput='getInputValuecon' name='value' type='text' placeholder="填写目标描述" placeholder-class="input-placeholder" />
+  </view>
+  <!-- 时间选择器 开始时间 -->
+  <view class="group6">
+    <view class="section">
+      <picker mode="date" value="{{startime}}" start="2022-01-01" end="2050-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          开始日期
+          <text class="text2">{{startime}}</text>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <!-- 时间选择器 结束时间 -->
+  <view class="group6">
+    <view class="section">
+      <picker mode="date" value="{{endtime}}" start="{{startime}}" end="2050-09-01" bindchange="bindDateChange111">
+        <view class="picker">
+          结束日期
+          <text class="text2">{{endtime}}</text>
+        </view>
+      </picker>
+    </view>
+  </view>
+  <!-- 保存按钮 -->
+  <view class="group4">
+    <button bindtap="save" class="btn1" style="position: relative; left: 127rpx; top: -20rpx; width: 494rpx; height: 80rpx; display: flex; box-sizing: border-box">
+      <view>保存</view>
+    </button>
+  </view>
+</view>

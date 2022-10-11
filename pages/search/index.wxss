@@ -1,0 +1,269 @@
+/* pages/search/index.wxss */
+.image-wrapper {
+    margin-left: 21.15rpx;
+    padding: 11.31rpx 0 11.38rpx;
+    background-color: #fcf2f167;
+    border-radius: 50rpx;
+    width: 421.15rpx;
+}
+
+page {
+    background-color: #FAFAFA;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+/* 
+.flex-col {
+    display: flex;
+    flex-direction: column;
+} */
+
+.sbox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.serch1 {
+    height: 48rpx;
+    /* display: flex; */
+    /* flex-direction: column; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 搜索框中的文字靠左 */
+    text-align: left;
+    padding-left: 16rpx;
+    padding-right: 0rpx;
+    color: rgb(62, 62, 62);
+    font-size: 28rpx;
+
+    /* position: relative; */
+}
+
+.ig {
+    /* position: absolute; */
+    /* 垂直居中 */
+    /* top: 100%; */
+    /* transform: translateY(30%); */
+    margin: 0 auto;
+    float: right;
+    right: 1rpx;
+    width: 51rpx;
+    height: 51rpx;
+    opacity: .6;
+}
+
+.image {
+    margin-left: 26.92rpx;
+    width: 30.77rpx;
+    height: 30.77rpx;
+}
+
+.cyCommentsTitle {
+    /* margin: auto; */
+    margin-left: 40rpx;
+    margin-top: 40rpx;
+    width: 180rpx;
+    height: 40rpx;
+    text-align: center;
+    border-bottom: 20rpx solid rgba(61, 97, 255, 0.51);
+}
+
+.cyCommentsTitle1 text {
+    position: relative;
+    top: 12rpx;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40rpx;
+}
+
+.cyCommentsTitle1 {
+    /* margin: auto; */
+    margin-left: 40rpx;
+    margin-top: 40rpx;
+    width: 180rpx;
+    height: 40rpx;
+    text-align: center;
+    border-bottom: 20rpx solid rgba(255, 87, 51, 0.61);
+}
+
+.cyCommentsTitle text {
+    position: relative;
+    top: 12rpx;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 40rpx;
+}
+
+
+.cyBlogBlock {
+    position: relative;
+    margin: auto;
+    margin-top: 5rpx;
+    padding: 30rpx;
+    top: 30rpx;
+    width: 92%;
+    border-radius: 30rpx;
+    background-color: rgba(255, 255, 255, 0.527);
+    box-sizing: border-box;
+}
+
+.cyBlogTitle {
+    width: 98%;
+    padding: 0 20rpx;
+    border-left: 12rpx solid rgba(61, 97, 255, 1);
+    font-size: 20px;
+    font-weight: 700;
+    word-break: break-all;
+    box-sizing: border-box;
+}
+
+.cyFooter {
+    display: flex;
+    flex-flow: row;
+}
+
+.cyBlockFooter1 {
+    margin-top: 30rpx;
+    width: 120rpx;
+    height: 50rpx;
+    border-radius: 100rpx;
+    background-color: rgba(0, 81, 255, 0.1);
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+}
+
+.cyBlockFooter1 text {
+    display: block;
+    margin-left: 8rpx;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0, 81, 255, 1);
+}
+
+.cyBlockFooter1 image {
+    margin-left: 15rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+
+
+.cyBlockFooter2 {
+    position: absolute;
+    right: 30rpx;
+    margin-top: 30rpx;
+    width: 120rpx;
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+}
+
+.cyBlockFooter2 image {
+    margin-left: 15rpx;
+    width: 35rpx;
+    height: 35rpx;
+}
+
+.cyBlockFooter2 text {
+    margin-left: 15rpx;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.cyTabBlock {
+    position: relative;
+    top: 450rpx;
+    width: 100%;
+    height: 25rpx;
+}
+
+.cyBlogBlock_2 {
+    position: relative;
+    margin: auto;
+    margin-top: 5rpx;
+    padding: 30rpx;
+    top: 0rpx;
+    width: 92%;
+    border-radius: 30rpx;
+    background-color: rgba(255, 255, 255, 0.527);
+    box-sizing: border-box;
+}
+
+.cyBlogTitle_2 {
+    width: 98%;
+    padding: 0 20rpx;
+    border-left: 12rpx solid rgba(255, 87, 51, 0.51);
+    font-size: 20px;
+    font-weight: 700;
+    word-break: break-all;
+    box-sizing: border-box;
+}
+
+.cyFooter_2 {
+    display: flex;
+    flex-flow: row;
+}
+
+.cyBlockFooter1_2 {
+    margin-top: 30rpx;
+    width: 120rpx;
+    height: 50rpx;
+    border-radius: 100rpx;
+    background-color: rgba(255, 87, 51, 0.2);
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+}
+
+.cyBlockFooter1_2 text {
+    display: block;
+    margin-left: 8rpx;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 87, 51, 1);
+}
+
+.cyBlockFooter1_2 image {
+    margin-left: 15rpx;
+    width: 28rpx;
+    height: 28rpx;
+}
+
+
+.cyBlockFooter2_2 {
+    position: absolute;
+    right: 30rpx;
+    margin-top: 30rpx;
+    width: 120rpx;
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+}
+
+.cyBlockFooter2_2 image {
+    margin-left: 15rpx;
+    width: 35rpx;
+    height: 35rpx;
+}
+
+.cyBlockFooter2_2 text {
+    margin-left: 15rpx;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.cyTabBlock_2 {
+    position: relative;
+    top: 450rpx;
+    width: 100%;
+    height: 25rpx;
+}

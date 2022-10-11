@@ -1,12 +1,13 @@
 /**index.wxss**/
-page{
-    background: #FAFAFA;
+page {
+  background: #FAFAFA;
 }
+
 .container {
-    padding: 0 0 400rpx;
-    min-height: 99vh;
-    box-sizing: border-box;
-    /* z-index: 2;*/
+  padding: 0 0 400rpx;
+  min-height: 99vh;
+  box-sizing: border-box;
+  /* z-index: 2;*/
 }
 
 /************************************************************
@@ -51,7 +52,7 @@ page{
   line-height: 40rpx;
 }
 
- 
+
 .cyBlogBlock {
   position: relative;
   margin: auto;
@@ -142,7 +143,7 @@ page{
   top: 0rpx;
   width: 92%;
   border-radius: 30rpx;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.527);
   box-sizing: border-box;
 }
 

@@ -1,0 +1,92 @@
+/* pages/goal1/index.wxss */
+.cyTopCircle {
+  position: fixed;
+  right: -63px;
+  top: -130px;
+  width: 369px;
+  height: 369px;
+  opacity: 1;
+  background: rgba(255, 87, 51, 0.16);
+  filter: blur(80px);
+}
+
+.cyTopCircle1 {
+  position: fixed;
+  left: -63px;
+  top: -270px;
+  width: 369px;
+  height: 369px;
+  opacity: 1;
+  background: rgba(78, 115, 255, 0.36);
+  filter: blur(80px);
+}
+.group0{
+  margin-top: 160rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rpx;
+}
+.group1{
+  text-align:center;
+  margin-top: 30rpx;
+}
+.text1{
+  color: black;
+  font-size:40rpx;
+  font-weight: bold;  
+}
+.group4{
+  position: fixed;
+  bottom: 50rpx;
+}
+.btn1 {
+  width:300rpx;
+  margin-top: 20rpx;
+  background-color:rgb(219, 231, 681);
+  color: rgb(48,114,255);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn1::after {
+  border: 0; 
+}
+
+.input-placeholder {
+  color:rgba(158, 158, 158,0.5);
+  font: 30rpx;
+}
+.group5{
+  background: rgba(0, 81, 255, 0.14);
+  margin-top: 25rpx;
+  width: 400rpx;
+  height:60rpx;
+  text-align:30rpx;
+  opacity: 1;
+  border-radius: 30rpx;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5.67rpx 17rpx 5.67rpx 11.33rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.InpImg{
+  margin-right: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.group6{
+  text-align: center;
+  margin-top: 20rpx;
+}
+.picker{
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.text2{
+  color: rgb(56,119,255);
+}

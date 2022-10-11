@@ -1,0 +1,82 @@
+/* pages/goal/index.wxss */
+.cyTopCircle {
+  position: fixed;
+  right: -63px;
+  top: -130px;
+  width: 369px;
+  height: 369px;
+  opacity: 1;
+  background: rgba(255, 87, 51, 0.16);
+  filter: blur(80px);
+}
+
+.cyTopCircle1 {
+  position: fixed;
+  left: -63px;
+  top: -270px;
+  width: 369px;
+  height: 369px;
+  opacity: 1;
+  background: rgba(78, 115, 255, 0.36);
+  filter: blur(80px);
+}
+.group0{
+  margin-top: 160rpx;
+}
+.group0,.group2,.group3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5rpx;
+  
+}
+.group1{
+  text-align:center;
+}
+.text1{
+  color: black;
+  font-size:40rpx;
+  font-weight: bold;  
+}
+.text2{
+  color: rgb(56, 119, 255);
+  font-size:60rpx;
+  font-weight: bold;
+}
+.text3{
+  color: black;
+  font-size:32rpx;
+  font-weight: bold;
+}
+.text5{
+  color:rgb(255,87,51);
+  font-size:80rpx;
+  font-weight: bold;
+}
+.text6{
+  color:rgb(56, 119, 255);
+  font-size:80rpx;
+  font-weight: bold;
+}
+.btn1 {
+  width:50%;
+  margin-top: 20rpx;
+  background-color:rgb(219, 231, 681);
+  color: rgb(48,114,255);
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnImg {
+  margin-right: 10rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.btn1::after {
+  border-radius: 50rpx;
+  border: 0; 
+}
