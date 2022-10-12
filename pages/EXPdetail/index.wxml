@@ -4,7 +4,7 @@
 <view class="cyTopBar">
     <TapNav title="详情" backDelta="1" />
     <view class="cyTopCircle"></view>
-    <image class="cyTopBgiron" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_lightbulb.png"></image>
+    <image class="cyTopBgiron" src="../../images/icons/exp_bg.png"></image>
     <view class="cyTopTitle">{{item.articleTitle}}</view>
     <view class="cyTopText">
         <text>{{item.anthor}}</text>
@@ -27,20 +27,20 @@
         <text>评论</text>
     </view>
 
-    <view wx:for="{{cyComments}}" wx:for-item="Comments" wx:key="xxx">
+    <view wx:for="{{item.commentList}}" wx:for-item="Comments" wx:key="xxx">
         <!-- 小卡片 -->
         <view class="cyCommentsBlock">
             <!-- 标题 -->
             <view class="cyCommentsAuthor">
-                {{item.commentList.uesrName}}
+                {{Comments.userName}}
             </view>
 
             <view class="cyCommentsTime">
-                {{item.commentList.time}}
+                {{Comments.time}}
             </view>
 
             <view class="cyComments">
-                {{item.commentList.comment}}
+                {{Comments.content}}
             </view>
 
         </view>
@@ -50,13 +50,14 @@
 
 
 <view class="cyFooter">
-    <view class="cyLike">
-        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_media-heart-03.png"></image>
-        <text>{{item.likeList.length}}</text>
+    <view class="cyLike" bindtap="praise">
+        <image src="../../images/icons/like_after_s2.png" wx:if="{{praiseJudge == 1}}"></image>
+        <image src="../../images/icons/like_before.png" wx:else></image>
+        <text style="color: {{textColor}};">{{likeNum}}</text>
     </view>
 
     <view class="cyTextArea">
-        <input 	value="发表评论"></input>
-        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/ioi3.png"></image>
+        <input placeholder="发表评论" bindinput="commentSet" value="{{commentTest}}" bindconfirm="Publish"/>
+        <image bindtap="Publish" src="../../images/icons/submit_s2.png"></image>
     </view>
 </view>

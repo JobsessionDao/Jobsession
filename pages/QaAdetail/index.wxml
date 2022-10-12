@@ -3,7 +3,7 @@
 <view class="cyTopBar">
     <TapNav title="详情" backDelta="1" />
     <view class="cyTopCircle"></view>
-    <image class="cyTopBgiron" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_message-fillet-unknown.png"></image>
+    <image class="cyTopBgiron" src="../../images/icons/qa_bg.png"></image>
     <view class="cyTopTitle">{{item.articleTitle}}</view>
     <view class="cyTopText">
         <text>{{item.anthor}}</text>
@@ -38,13 +38,14 @@
 </view>
 
 <view class="cyFooter">
-    <view class="cyLike">
-        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_eye.png"></image>
-        <text>{{item.likeList.length}}</text>
+    <view class="cyLike" bindtap="praise">
+        <image src="../../images/icons/like_after_s1.png" wx:if="{{praiseJudge == 1}}"></image>
+        <image src="../../images/icons/viewed_before.png" wx:else></image>
+        <text style="color: {{textColor}};">{{likeNum}}</text>
     </view>
 
     <view class="cyTextArea">
-        <input 	value="发表回答"></input>
-        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/asdaf2.png"></image>
+        <input placeholder="发表评论" bindinput="commentSet" value="{{commentTest}}" bindconfirm="Publish"/>
+        <image bindtap="Publish" src="../../images/icons/submit_s1.png"></image>
     </view>
 </view>
