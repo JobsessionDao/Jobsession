@@ -13,7 +13,7 @@ Page({
     CollectList: [],
     CreateList: [],
   },
-  // 用于我的经验，我的问答，职业测评，我的目标，收藏 页面函数
+  // 用于我的经验，我的互助，职业测评，我的目标，收藏 页面函数
   jump1: function () {
     wx.switchTab({
       url: "/pages/index/index",

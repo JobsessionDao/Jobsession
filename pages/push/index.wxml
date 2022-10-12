@@ -1,0 +1,40 @@
+<TapNav title="发布" navBgColor="linear-gradient(90deg, rgba(212, 225, 255, 0.64) 0%, rgba(255, 220, 212, 0.66) 100%);" backDelta="1" />
+<!-- <view class="cyBgLeft_g"></view>
+<view class="cyBgRight_g"></view> -->
+<view class="flex-col space-y-452 page">
+    <view class="flex-col">
+        <input bindinput="titleInput" class="text text_2" placeholder="请填写标题" />
+        <view class="flex-row space-x-4 group">
+            <text class="text_3">点击选择话题</text>
+            <!-- 使用微信 API 编写一个选择器 -->
+            <picker mode="selector" value="{{index}}" range="{{array}}" bindchange="bindPickerChange">
+                <view class="flex-row justify-evenly equal-division-item">
+                    <image class="image" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653611131202369768.png" />
+                    <text class="font_1">{{sslected}}</text>
+                </view>
+            </picker>
+        </view>
+        <view class="divider"></view>
+        <view style="height:1000rpx">
+            <textarea bindinput="contentInput" maxlength="-1" class="text_4 text_5" placeholder="请填写正文，经验贴不超过1000字，问答贴不超过100字" />
+        </view>
+    </view>
+    <view class="flex-col space-y-18 group_2">
+        <view class="flex-row space-x-4">
+            <block wx:for="{{images}}" wx:key="*this">
+                <image bindtap="delete" mode="aspectFill" class="equal-division-item_2" src="{{item}}" />
+            </block>
+            <!-- <image class="equal-division-item_2" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16655635933424855291.png" />
+            <image class="equal-division-item_2" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16655635933434189828.png" />
+            <image class="equal-division-item_2" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16655635933442917248.png" /> -->
+            <view bindtap="addimg" style="display:flex ;justify-content: center;align-items: center;" class="flex-col items-center equal-division-item_3">
+                <image class="image_2" src="../../images/icons/addimage.png" />
+            </view>
+        </view>
+        <text style="text-align:center;color:gray;font-size:18rpx;height:30rpx">点击图片可删除</text>
+        <view class="flex-row space-x-7 equal-division_2">
+            <image bindtap="publish1" class="equal-division-item_4" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16655635933346708588.png" />
+            <image bindtap="publish2" class="equal-division-item_4" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16655635933378082864.png" />
+        </view>
+    </view>
+</view>

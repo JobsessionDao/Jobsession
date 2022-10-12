@@ -1,0 +1,65 @@
+/* pages/Holland/index.wxss */
+.cyBgLeft {
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter: blur(80rpx);
+    width: 600rpx;
+    height: 400rpx;
+    background-color: rgba(78, 115, 255, 0.36);
+}
+
+.cyBgRight {
+    position: fixed;
+    top: 100rpx;
+    right: 0;
+    filter: blur(80rpx);
+    width: 600rpx;
+    height: 400rpx;
+    background-color: rgba(255, 87, 51, 0.16);
+}
+
+.container {
+    height: 100%;
+    padding: 0;
+    margin-top: 400rpx;
+}
+
+.container image {
+    height: 650rpx;
+    width: 600rpx;
+}
+
+.cyHoTitle {
+    display: block;
+    margin-top: 50rpx;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.kaishi_c {
+    margin-top: 40rpx;
+    width: 65%;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-radius: 25rpx;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(61, 97, 255, 1);
+    text-align: center;
+    background-color: rgba(86, 125, 244, 0.1);
+}
+
+.cyNotice {
+    margin-top: 10rpx;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.kaishi_c_hover {
+    width: 62%;
+    height: 95rpx;
+    line-height: 95rpx;
+    background-color: rgba(86, 125, 244, 0.1);
+    transition: all 300ms ease .5ms;
+}

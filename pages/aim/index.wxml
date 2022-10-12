@@ -18,7 +18,7 @@
     <text class="text3">{{myAim.aimDesc}}</text>
   </view>
   <view class="group2">
-    <text class="text3">{{starttime}}-{{endtime}}</text>
+    <text class="text3">{{startime}}-{{endtime}}</text>
   </view>
   <!-- 倒计时 -->
   <view class="group3" bindtap="Timecountdown">

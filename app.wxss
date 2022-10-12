@@ -17,7 +17,7 @@
   filter: blur(80rpx);
   width: 600rpx;
   height: 400rpx;
-  z-index: -1;
+  z-index: -100;
   background-color: rgba(78, 115, 255, 0.36);
 }
 
@@ -28,6 +28,6 @@
   filter: blur(80rpx);
   width: 600rpx;
   height: 400rpx;
-  z-index: -1;
+  z-index: -100;
   background-color: rgba(255, 87, 51, 0.16);
 }

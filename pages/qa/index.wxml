@@ -1,19 +1,15 @@
-<!--pages/QaA/QaA.wxml-->
+<!-- pages/QaA/QaA.wxml -->
 <view class="cyTopBar">
     <view class="cyTopCircle"></view>
-    <image class="cyTopBgtext" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/问答.png"></image>
+    <image class="cyTopBgtext" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/Q&A.png"></image>
     <image class="cyTopBgiron" src="../../images/icons/qa_bg.png"></image>
     <view class="cyTopText">作为同一所大学的学生，其实，最好的榜样就在我们身边，只是我们缺乏沟通的桥梁，在这里，职念为你提供一个勤学好问的机会，来吧，问出困惑你已久的问题！</view>
 </view>
-
-
 <view wx:for="{{itemList}}" wx:for-item="experience" wx:key="xxx">
     <!-- 小卡片 -->
     <view class="cyBlogBlock" bindtap="goToDetail" data-item="{{experience}}">
         <!-- 标题 -->
-        <view class="cyBlogTitle">
-            {{experience.articleTitle}}
-        </view>
+        <view class="cyBlogTitle">{{experience.articleTitle}}</view>
         <view class="cyFooter">
             <!-- 左页脚 -->
             <view class="cyBlockFooter1">

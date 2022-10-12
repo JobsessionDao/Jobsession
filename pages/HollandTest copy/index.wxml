@@ -1,0 +1,24 @@
+<!--pages/HollandTest/index.wxml-->
+<goback1></goback1>
+<!-- <TapNav title="问题" backPath="../Holland/index" /> -->
+<view class="cyBgLeft"></view>
+<view class="cyBgRight"></view>
+<view class="container">
+    <text class="cyQuestion">{{index+1}}/61 {{questionDetail}}</text>
+    <!-- <view class="wenti">
+        <view class="wenti_a"></view>
+    </view> -->
+
+    <!-- 大盒子：问题＋选项 -->
+
+    <view class="cyOptionBlock">
+        <view class="cyHoBotton_color_b" hover-class="cyHoBotton_hover_color_b" bindtap='answerClickA'>
+            <text>是</text>
+        </view>
+        <view class="cyHoBotton_color_r" hover-class="cyHoBotton_hover_color_r" bindtap='answerClickA'>
+            <text>否</text>
+        </view>
+    </view>
+
+
+</view>

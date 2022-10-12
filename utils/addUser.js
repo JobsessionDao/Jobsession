@@ -37,10 +37,16 @@ var addUser = {
         success: function (res) {
           // res 是一个对象，其中有 _id 字段标记刚创建的记录的 id
           console.log(res);
+          wx.showToast({
+            title: '向数据库添加成功',
+          })
           resolve("添加成功");
         },
         fail: function (res) {
           console.log(res);
+          wx.showToast({
+            title: '向数据库添加失败',
+          })
           reject("添加失败");
         },
       });
