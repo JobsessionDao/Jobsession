@@ -27,20 +27,20 @@
         <text>评论</text>
     </view>
 
-    <view wx:for="{{cyComments}}" wx:for-item="Comments" wx:key="xxx">
+    <view wx:for="{{item.commentList}}" wx:for-item="Comments" wx:key="xxx">
         <!-- 小卡片 -->
         <view class="cyCommentsBlock">
             <!-- 标题 -->
             <view class="cyCommentsAuthor">
-                {{item.commentList.uesrName}}
+                {{Comments.userName}}
             </view>
 
             <view class="cyCommentsTime">
-                {{item.commentList.time}}
+                {{Comments.time}}
             </view>
 
             <view class="cyComments">
-                {{item.commentList.comment}}
+                {{Comments.content}}
             </view>
 
         </view>
@@ -57,7 +57,7 @@
     </view>
 
     <view class="cyTextArea">
-        <input 	value="发表评论"></input>
-        <image src="../../images/icons/submit_s2.png"></image>
+        <input placeholder="发表评论" bindinput="commentSet" value="{{commentTest}}" bindconfirm="Publish"/>
+        <image bindtap="Publish" src="../../images/icons/submit_s2.png"></image>
     </view>
 </view>

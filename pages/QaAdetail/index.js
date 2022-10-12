@@ -13,7 +13,10 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        praiseJudge: 2,
+        likeNum: 0,
+        textColor: "rgba(0, 0, 0, 1)",
+        commentTest: null,
         //   title:"北航考研保护第一志愿吗？",
         //   author:"@swfoodt",
         //   time:"2022-10-05",
@@ -49,26 +52,20 @@ Page({
     async onLoad(options) {
         console.log(options.data)
         let item = options.data
-        item = JSON.parse(item)
         console.log("++++" + item)
+        console.log(options.data)
+
+        //获取点赞
+        let Art = await getArticle.getArticle.getArticleMethod(item);
         this.setData({
-            item: item
+            likeNum: Art.likeList.length,
+            item: Art
         })
         for (var a = 0; a < this.data.item.time.length; a++) {
             var unixTimestamp = new Date(this.data.item.time)
-
             var datestr = unixTimestamp.getFullYear() + "-" + (unixTimestamp.getMonth() + 1) + "-" + unixTimestamp.getDate();
-
             this.data.item.time = datestr;
-
         }
-        console.log(this.data)
-
-        //获取点赞
-        let Art = await getArticle.getArticle.getArticleMethod(this.data.item._id);
-        this.setData({
-            likeNum: Art.likeList.length,
-        })
         console.log(this.data.likeNum)
 
         //获得当前用户点赞状态
@@ -116,6 +113,28 @@ Page({
 
         console.log(this.data.praiseJudge)
         console.log("*****" + res)
+
+    },
+
+    commentSet: function (e) {
+        this.setData({
+            commentTest: e.detail.value,
+        })
+    },
+
+    Publish: async function (e) {
+        console.log(this.data.commentTest)
+        let res = await addComment.addComment.addMethod(this.data.item._id, app.globalData.userInfo[2], this.data.commentTest, app.globalData.userInfo[0]);
+        if (res == "评论成功") {
+            this.setData({
+                commentTest: ""
+            })
+        }else if(res == "评论失败"){
+            wx.showToast({
+                title: '评论失败',
+                icon: "error",
+            })
+        }
 
     },
     /**

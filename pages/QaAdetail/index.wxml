@@ -45,7 +45,7 @@
     </view>
 
     <view class="cyTextArea">
-        <input 	value="发表回答"></input>
-        <image src="../../images/icons/submit_s1.png"></image>
+        <input placeholder="发表评论" bindinput="commentSet" value="{{commentTest}}" bindconfirm="Publish"/>
+        <image bindtap="Publish" src="../../images/icons/submit_s1.png"></image>
     </view>
 </view>

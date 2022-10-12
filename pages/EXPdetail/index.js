@@ -15,7 +15,8 @@ Page({
     data: {
         praiseJudge: 2,
         likeNum: 0,
-        textColor: "rgba(0, 0, 0, 1)"
+        textColor: "rgba(0, 0, 0, 1)",
+        commentTest: null,
     },
 
     /**
@@ -24,31 +25,28 @@ Page({
     async onLoad(options) {
         console.log(options.data)
         let item = options.data
-        item = JSON.parse(item)
         console.log("++++" + item)
+        console.log(options.data)
+
+        //获取点赞
+        let Art = await getArticle.getArticle.getArticleMethod(item);
         this.setData({
-            item: item
+            likeNum: Art.likeList.length,
+            item: Art
         })
         for (var a = 0; a < this.data.item.time.length; a++) {
             var unixTimestamp = new Date(this.data.item.time)
             var datestr = unixTimestamp.getFullYear() + "-" + (unixTimestamp.getMonth() + 1) + "-" + unixTimestamp.getDate();
             this.data.item.time = datestr;
         }
-        console.log(this.data)
-
-        //获取点赞
-        let Art = await getArticle.getArticle.getArticleMethod(this.data.item._id);
-        this.setData({
-            likeNum: Art.likeList.length,
-        })
         console.log(this.data.likeNum)
 
         //获得当前用户点赞状态
         for (let i = 0; i < this.data.item.likeList.length; i++) {
             if (app.globalData.userInfo[2] == this.data.item.likeList[i]) {
                 this.setData({
-                    praiseJudge : 1,
-                    textColor : "rgba(0, 81, 255, 1)"
+                    praiseJudge: 1,
+                    textColor: "rgba(0, 81, 255, 1)"
                 })
                 break;
             }
@@ -64,13 +62,13 @@ Page({
         if (res == "点赞成功") {
             this.setData({
                 likeNum: this.data.likeNum + 1,
-                textColor : "rgba(0, 81, 255, 1)",
+                textColor: "rgba(0, 81, 255, 1)",
                 praiseJudge: 1
             })
         } else if (res == "取消点赞成功") {
             this.setData({
                 likeNum: this.data.likeNum - 1,
-                textColor : "rgba(0, 0, 0, 1)",
+                textColor: "rgba(0, 0, 0, 1)",
                 praiseJudge: 2
             })
         } else if (res == "点赞失败") {
@@ -91,6 +89,27 @@ Page({
 
     },
 
+    commentSet: function (e) {
+        this.setData({
+            commentTest: e.detail.value,
+        })
+    },
+
+    Publish: async function (e) {
+        console.log(this.data.commentTest)
+        let res = await addComment.addComment.addMethod(this.data.item._id, app.globalData.userInfo[2], this.data.commentTest, app.globalData.userInfo[0]);
+        if (res == "评论成功") {
+            this.setData({
+                commentTest: ""
+            })
+        }else if(res == "评论失败"){
+            wx.showToast({
+                title: '评论失败',
+                icon: "error",
+            })
+        }
+
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
