@@ -13,8 +13,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-        praiseJudge: 0,
-        likeNum: -1,
+        praiseJudge: 2,
+        likeNum: 0,
+        textColor: "rgba(0, 0, 0, 1)"
     },
 
     /**
@@ -35,12 +36,25 @@ Page({
         }
         console.log(this.data)
 
+        //获取点赞
         let Art = await getArticle.getArticle.getArticleMethod(this.data.item._id);
-        // console.log(Art)
         this.setData({
-            likeNum : Art.likeList.length,
+            likeNum: Art.likeList.length,
         })
         console.log(this.data.likeNum)
+
+        //获得当前用户点赞状态
+        for (let i = 0; i < this.data.item.likeList.length; i++) {
+            if (app.globalData.userInfo[2] == this.data.item.likeList[i]) {
+                this.setData({
+                    praiseJudge : 1,
+                    textColor : "rgba(0, 81, 255, 1)"
+                })
+                break;
+            }
+
+        }
+        console.log(this.data.praiseJudge)
     },
 
     praise: async function (e) {
@@ -48,32 +62,32 @@ Page({
         console.log(this.data.item._id);
         let res = await addLike.addLike.addMethod(this.data.item._id, app.globalData.userInfo[2]);
         if (res == "点赞成功") {
-            this.data.praiseJudge = 1;
             this.setData({
-                likeNum : this.data.likeNum + 1,
+                likeNum: this.data.likeNum + 1,
+                textColor : "rgba(0, 81, 255, 1)",
+                praiseJudge: 1
             })
         } else if (res == "取消点赞成功") {
-            this.data.praiseJudge = 2;
             this.setData({
-                likeNum : this.data.likeNum - 1,
+                likeNum: this.data.likeNum - 1,
+                textColor : "rgba(0, 0, 0, 1)",
+                praiseJudge: 2
             })
         } else if (res == "点赞失败") {
-            this.data.praiseJudge = -1;
             wx.showToast({
-              title: '点赞失败',
-              icon:"error",
+                title: '点赞失败',
+                icon: "error",
             })
-        } else if(res == "取消点赞失败"){
-            this.data.praiseJudge = -2;
+        } else if (res == "取消点赞失败") {
             wx.showToast({
                 title: '取消点赞失败',
-                icon:"error",
+                icon: "error",
             })
         }
 
 
         console.log(this.data.praiseJudge)
-        console.log("*****"+res)
+        console.log("*****" + res)
 
     },
 

@@ -2,7 +2,7 @@
 <view class="cyTopBar" >
   <view class="cyTopCircle"></view>
   <image class="cyTopBgtext" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/经验.png"></image>
-  <image class="cyTopBgiron" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_lightbulb.png"></image>
+  <image class="cyTopBgiron" src="../../images/icons/exp_bg.png"></image>
   <view class="cyTopText">古人云：“见贤思齐焉”。无论是保研、考研、就业还是出国留学，前人的成功都是后人最好的借鉴。你就是榜样，请把你的经验分享给我们。</view>
 </view>
 
@@ -16,12 +16,12 @@
     <view class="cyFooter">
       <!-- 左页脚 -->
       <view class="cyBlockFooter1">
-        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/分组 1.png"></image>
+        <image src="../../images/icons/tag_s2.png"></image>
         <text>{{experience.articleTag}}</text>
       </view>
       <!-- 右页脚 -->
       <view class="cyBlockFooter2">
-        <image class="cyFooterIron2" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/点赞.png"></image>
+        <image class="cyFooterIron2" src="../../images/icons/likeicon.png"></image>
         <text>{{experience.likeList.length}}</text>
       </view>
     </view>

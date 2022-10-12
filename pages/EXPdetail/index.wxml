@@ -4,7 +4,7 @@
 <view class="cyTopBar">
     <TapNav title="详情" backDelta="1" />
     <view class="cyTopCircle"></view>
-    <image class="cyTopBgiron" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_lightbulb.png"></image>
+    <image class="cyTopBgiron" src="../../images/icons/exp_bg.png"></image>
     <view class="cyTopTitle">{{item.articleTitle}}</view>
     <view class="cyTopText">
         <text>{{item.anthor}}</text>
@@ -51,12 +51,13 @@
 
 <view class="cyFooter">
     <view class="cyLike" bindtap="praise">
-        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_media-heart-03.png"></image>
-        <text>{{likeNum}}</text>
+        <image src="../../images/icons/like_after_s2.png" wx:if="{{praiseJudge == 1}}"></image>
+        <image src="../../images/icons/like_before.png" wx:else></image>
+        <text style="color: {{textColor}};">{{likeNum}}</text>
     </view>
 
     <view class="cyTextArea">
         <input 	value="发表评论"></input>
-        <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/ioi3.png"></image>
+        <image src="../../images/icons/submit_s2.png"></image>
     </view>
 </view>

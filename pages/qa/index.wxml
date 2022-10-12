@@ -2,7 +2,7 @@
 <view class="cyTopBar">
     <view class="cyTopCircle"></view>
     <image class="cyTopBgtext" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/问答.png"></image>
-    <image class="cyTopBgiron" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/icons_24pt_message-fillet-unknown.png"></image>
+    <image class="cyTopBgiron" src="../../images/icons/qa_bg.png"></image>
     <view class="cyTopText">作为同一所大学的学生，其实，最好的榜样就在我们身边，只是我们缺乏沟通的桥梁，在这里，职念为你提供一个勤学好问的机会，来吧，问出困惑你已久的问题！</view>
 </view>
 
@@ -17,12 +17,12 @@
         <view class="cyFooter">
             <!-- 左页脚 -->
             <view class="cyBlockFooter1">
-                <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/分组 11.png"></image>
+                <image src="../../images/icons/tag_s1.png"></image>
                 <text>{{experience.articleTag}}</text>
             </view>
             <!-- 右页脚 -->
             <view class="cyBlockFooter2">
-                <image class="cyFooterIron2" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/评论.png"></image>
+                <image class="cyFooterIron2" src="../../images/icons/commenticon.png"></image>
                 <text>{{experience.likeList.length}}</text>
             </view>
         </view>

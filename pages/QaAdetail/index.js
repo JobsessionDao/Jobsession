@@ -1,4 +1,12 @@
 // pages/QaAdetail/QaAdetail.js
+let getUserID = require("../../utils/getUserID.js");
+let addUser = require("../../utils/addUser.js");
+let getArticle = require("../../utils/getArticle.js");
+let addLike = require("../../utils/addLike.js");
+let addComment = require("../../utils/addComment.js");
+let addCollect = require("../../utils/addCollect.js");
+
+const app = getApp();
 Page({
 
     /**
@@ -6,39 +14,39 @@ Page({
      */
     data: {
 
-    //   title:"北航考研保护第一志愿吗？",
-    //   author:"@swfoodt",
-    //   time:"2022-10-05",
-    //   detail:"如题，希望考研北京理工大学，请问学长学姐它是否会保护第一志愿？",
-    //   viewed:"15",
-     
-    //   cyAnswers: [
-    //     {
-    //       AnswerName:"杰出青年",
-    //       Atime:"2022/10/06",
-    //       Answer:"全文通俗易懂，趣味性强。 文章线索明朗主题突出，文章开头与结尾时的诗化语言。充满想象与韵律之美，令人愿读爱读，不忍释手。"
-    //     },
-    //     {
-    //       AnswerName:"小南瓜",
-    //       Atime:"2022/10/06",
-    //       Answer:"全文通俗易懂，趣味性强。 文章线索明朗主题突出，文章开头与结尾时的诗化语言。充满想象与韵律之美，令人愿读爱读，不忍释手。"
-    //     },
-    //     {
-    //       AnswerName:"大南瓜",
-    //       Atime:"2022/10/06",
-    //       Answer:"全文通俗易懂，趣味性强。 文章线索明朗主题突出，文章开头与结尾时的诗化语言。充满想象与韵律之美，令人愿读爱读，不忍释手。"
-    //     },
-    //     {
-    //       AnswerName:"南瓜",
-    //       Atime:"2022/10/06",
-    //       Answer:"好活儿。"
-    //     },
-    //     // 更多数据...
-    //   ]
-  
+        //   title:"北航考研保护第一志愿吗？",
+        //   author:"@swfoodt",
+        //   time:"2022-10-05",
+        //   detail:"如题，希望考研北京理工大学，请问学长学姐它是否会保护第一志愿？",
+        //   viewed:"15",
+
+        //   cyAnswers: [
+        //     {
+        //       AnswerName:"杰出青年",
+        //       Atime:"2022/10/06",
+        //       Answer:"全文通俗易懂，趣味性强。 文章线索明朗主题突出，文章开头与结尾时的诗化语言。充满想象与韵律之美，令人愿读爱读，不忍释手。"
+        //     },
+        //     {
+        //       AnswerName:"小南瓜",
+        //       Atime:"2022/10/06",
+        //       Answer:"全文通俗易懂，趣味性强。 文章线索明朗主题突出，文章开头与结尾时的诗化语言。充满想象与韵律之美，令人愿读爱读，不忍释手。"
+        //     },
+        //     {
+        //       AnswerName:"大南瓜",
+        //       Atime:"2022/10/06",
+        //       Answer:"全文通俗易懂，趣味性强。 文章线索明朗主题突出，文章开头与结尾时的诗化语言。充满想象与韵律之美，令人愿读爱读，不忍释手。"
+        //     },
+        //     {
+        //       AnswerName:"南瓜",
+        //       Atime:"2022/10/06",
+        //       Answer:"好活儿。"
+        //     },
+        //     // 更多数据...
+        //   ]
+
     },
-  
-    onLoad(options) {
+
+    async onLoad(options) {
         console.log(options.data)
         let item = options.data
         item = JSON.parse(item)
@@ -55,55 +63,107 @@ Page({
 
         }
         console.log(this.data)
-    },
-  
 
+        //获取点赞
+        let Art = await getArticle.getArticle.getArticleMethod(this.data.item._id);
+        this.setData({
+            likeNum: Art.likeList.length,
+        })
+        console.log(this.data.likeNum)
+
+        //获得当前用户点赞状态
+        for (let i = 0; i < this.data.item.likeList.length; i++) {
+            if (app.globalData.userInfo[2] == this.data.item.likeList[i]) {
+                this.setData({
+                    praiseJudge: 1,
+                    textColor: "rgba(255, 87, 51, 1)"
+                })
+                break;
+            }
+
+        }
+        console.log(this.data.praiseJudge)
+    },
+
+    praise: async function (e) {
+        console.log(app.globalData.userInfo[2]);
+        console.log(this.data.item._id);
+        let res = await addLike.addLike.addMethod(this.data.item._id, app.globalData.userInfo[2]);
+        if (res == "点赞成功") {
+            this.setData({
+                likeNum: this.data.likeNum + 1,
+                textColor: "rgba(255, 87, 51, 1)",
+                praiseJudge: 1
+            })
+        } else if (res == "取消点赞成功") {
+            this.setData({
+                likeNum: this.data.likeNum - 1,
+                textColor: "rgba(0, 0, 0, 1)",
+                praiseJudge: 2
+            })
+        } else if (res == "点赞失败") {
+            wx.showToast({
+                title: '点赞失败',
+                icon: "error",
+            })
+        } else if (res == "取消点赞失败") {
+            wx.showToast({
+                title: '取消点赞失败',
+                icon: "error",
+            })
+        }
+
+
+        console.log(this.data.praiseJudge)
+        console.log("*****" + res)
+
+    },
     /**
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady() {
-  
+
     },
-  
+
     /**
      * 生命周期函数--监听页面显示
      */
     onShow() {
-  
+
     },
-  
+
     /**
      * 生命周期函数--监听页面隐藏
      */
     onHide() {
-  
+
     },
-  
+
     /**
      * 生命周期函数--监听页面卸载
      */
     onUnload() {
-  
+
     },
-  
+
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-  
+
     },
-  
+
     /**
      * 页面上拉触底事件的处理函数
      */
     onReachBottom() {
-  
+
     },
-  
+
     /**
      * 用户点击右上角分享
      */
     onShareAppMessage() {
-  
+
     }
-  })
+})
