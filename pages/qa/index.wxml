@@ -23,7 +23,7 @@
             <!-- 右页脚 -->
             <view class="cyBlockFooter2">
                 <image class="cyFooterIron2" src="../../images/icons/commenticon.png"></image>
-                <text>{{experience.likeList.length}}</text>
+                <text>{{experience.commentList.length}}</text>
             </view>
         </view>
     </view>

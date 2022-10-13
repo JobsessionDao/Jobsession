@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/myCollection/index",
+    "pages/myQA/index",
+    "pages/myEXP/index",
     "pages/login/index",
     "pages/index/index",
     "pages/aim/index",

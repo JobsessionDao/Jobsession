@@ -1,4 +1,4 @@
-// pages/QaA/QaA.js
+// pages/myEXP/index.js
 let getUserID = require("../../utils/getUserID.js");
 let addUser = require("../../utils/addUser.js");
 let addArticle = require("../../utils/addArticle.js");
@@ -12,6 +12,7 @@ let articleList;
 let allLength;
 let isAll = false;
 
+
 Page({
 
     /**
@@ -19,7 +20,16 @@ Page({
      */
     data: {
         itemList: [],
+        navBgColor:"rgba(0, 81, 255, 0.04)",
+        EXPleft:"../../images/icons/tag_s2.png",
+        EXPright:"../../images/icons/likeicon.png",
+        QAleft:"../../images/icons/tag_s1.png",
+        QAright:"../../images/icons/commenticon.png",
     },
+
+    /**
+     * 生命周期函数--监听页面加载
+     */
     loadMethod: async function (aType) {
         let old_data = this.data.itemList;
         // console.log(old_data.length+"  "+count);
@@ -54,29 +64,23 @@ Page({
         db = wx.cloud.database();
         articleList = db.collection("articleList");
         count = await db.collection("articleList").count();
-        this.loadMethod(2);
+        this.loadMethod(1);
     },
 
     onReachBottom: async function () {
         db = wx.cloud.database();
         articleList = db.collection("articleList");
         count = await db.collection("articleList").count();
-        await this.loadMethod(2);
+        await this.loadMethod(1);
     },
 
     goToDetail: function (e) {
         let item = e.currentTarget.dataset.item
         console.log(item)
         wx.navigateTo({
-            url: '/pages/QaAdetail/index?data=' + item._id,
+            url: '/pages/EXPdetail/index?data=' + item._id,
         })
     },
-
-
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
 
     /**
      * 生命周期函数--监听页面初次渲染完成
