@@ -154,7 +154,7 @@ Page({
         console.log(res);
         showReal = res.data[0].realpage;
 
-        console.log("!!!!!!!!!!!!showReal" + res.data[0].realpage);
+        console.log("showReal" + res.data[0].realpage);
         if (res.data[0].realpage) {
           wx.redirectTo({
             url: "/pages/Holland copy/index",
