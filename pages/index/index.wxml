@@ -27,6 +27,9 @@
     </view>
   </view>
   <view style="margin-top: 210rpx;">
+    <view bindtap="gopush" style="display:flex;justify-content:center;align-items:center" class="gopush" hover-class="none" hover-stop-propagation="false">
+      <image style="width:90%;height:230rpx" src="https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/tipw.png" lazy-load="false" binderror="" bindload=""></image>
+    </view>
     <view class="cyCommentsTitle" bindtap="addLike">
       <text>热门经验</text>
     </view>
@@ -50,7 +53,7 @@
       </view>
     </view>
     <view class="cyCommentsTitle1" bindtap="addLike">
-      <text>热门问答</text>
+      <text>热门互助</text>
     </view>
     <view wx:for="{{itemList_2}}" wx:for-item="experience" wx:key="xxx">
       <!-- 小卡片 -->

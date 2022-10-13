@@ -27,6 +27,30 @@ Page({
     stateHeight: 0,
   },
   onLoad: async function (options) {
+    // wx.cloud.init();
+    // const db1 = wx.cloud.database();
+    // // 声明 settings 表
+    // const settings = db1.collection("settings");
+
+    // // 读取 settings 表中的数据中 type 为 config 的数据
+    // settings
+    //   .where({
+    //     type: "config",
+    //   })
+    //   .get()
+    //   .then((res) => {
+    //     console.log(res);
+    //     // showReal = res.data[0].realpage;
+
+    //     console.log("!!!!!!!!!!!!showReal" + res.data[0].realpage);
+    //     if (res.data[0].realpage) {
+    //       wx.redirectTo({
+    //         url: "/pages/Holland/index",
+    //       });
+    //       // 停止执行后面的代码
+    //       return;
+    //     }
+    //   });
     this.topnav();
     wx.cloud.init();
     db = wx.cloud.database();
@@ -150,11 +174,16 @@ Page({
     }
   },
   addLike: async function (e) {
-    let res = await addLike.addLike.addMethod(
-      "6cf53e9d63413019006937fb24b67c3d",
-      this.data.userID
-    );
-    console.log(res);
+    // let res = await addLike.addLike.addMethod(
+    //   "6cf53e9d63413019006937fb24b67c3d",
+    //   this.data.userID
+    // );
+    // console.log(res);
+    db.collection("articleList")
+      .where({
+        all: null,
+      })
+      .remove();
   },
   async login() {
     // 用户登录
@@ -216,6 +245,11 @@ Page({
     console.log(item);
     wx.navigateTo({
       url: "/pages/QaAdetail/index?data=" + JSON.stringify(item),
+    });
+  },
+  gopush: function () {
+    wx.navigateTo({
+      url: "/pages/push/index",
     });
   },
 });

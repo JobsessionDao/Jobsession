@@ -34,14 +34,22 @@ Page({
     });
     console.log("myAim = ", this.data.myAim);
     this.countDown(this.data.myAim.endDate);
+    console.log("myAimDate = ", this.data.myAim.endDate);
+    let bt = this.data.myAim.startDate;
+    let et = this.data.myAim.endDate;
+    // 获取 bt 的年
+    let btYear = new Date(this.data.myAim.beginDate).getFullYear();
+    // 获取 et 的年
+    let etYear = new Date(this.data.myAim.endDate).getFullYear();
     this.setData({
-      startime: new Date(this.data.myAim.startDate).toString(),
-      endtime: new Date(this.data.myAim.endDate).toString(),
+      startime: btYear,
+      endtime: etYear,
     });
-    把startime转为字符串;
+    console.log("btYear = ", this.data.myAim.beginDate);
     // let startime = this.data.startime.toString();
     // 对 endTime 格式化为 年-月-日 的格式
-    let endTime = new Date(this.data.myAim.endDate);
+    // let endtime = this.data.endtime.toString();
+
     // 计算从 myAim.beginDate 到 myAim.endDate 的时间差（年、天、时、分、秒）
   },
   countDown: function (endTime) {

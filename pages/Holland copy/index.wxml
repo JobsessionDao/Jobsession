@@ -1,0 +1,15 @@
+<!--pages/Holland/index.wxml-->
+<!-- <TapNav title="" backPath="../my/index"/> -->
+<goback1></goback1>
+<view class="cyBgLeft"></view>
+<view class="cyBgRight"></view>
+<view class="container">
+    <image src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/asdasf1.png"></image>
+    <text class="cyHoTitle">霍兰德职业兴趣测试</text>
+    
+    <view class="kaishi_c" bindtap="go_01" hover-class="kaishi_c_hover" hover-stop-propagation="false">
+        <view class="kaishi_c_a" hover-class="none" hover-stop-propagation="false"></view>
+        <text>开始测试</text> 
+    </view>
+    <text class="cyNotice">结果仅供参考</text>
+</view>

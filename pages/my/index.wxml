@@ -47,7 +47,7 @@
         <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405005081466.png" />
       </view>
       <view bindtap="gomyQA">
-        <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405120826436.png" />
+        <image class="grid-item" src="https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/huzhu.png" />
       </view>
       <view bindtap="goholland">
         <image class="grid-item" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653311405076982188.png" />

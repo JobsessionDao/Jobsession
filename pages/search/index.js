@@ -76,24 +76,56 @@ Page({
    */
   onShareAppMessage: function () {},
   inps: async function () {
+    console.log("点击了" + this.data.srh);
     wx.cloud.init();
     db = wx.cloud.database();
-    count = await db.collection("articleList").count();
-    await this.loadMethod();
-    this.onLoad();
+    // count = await db.collection("articleList").count();
+    // await this.loadMethod();
+    // this.onLoad();
+    // 查询 articleList 集合中的所有的标题中含有 this.data.srh 的数据
+    // db.collection("articleList")
+    //   .where({
+    //     articleTitle: db.RegExp({
+    //       regexp: this.data.srh,
+    //       options: "i",
+    //     }),
+    //   })
+    //   .get({
+    //     success: (res) => {
+    //       console.log(res);
+    //       this.setData({
+    //         itemList: res.data,
+    //       });
+    //     },
+    //   });
+    wx.cloud
+      .callFunction({
+        name: "getAllSrh",
+        data: {
+          srh: this.data.srh,
+        },
+      })
+      .then((res) => {
+        this.setData({
+          // data 为查询到的所有待办事项列表
+          itemList: res.result,
+        });
+      });
   },
   inputTitle: function (e) {
     this.setData({
       srh: e.detail.value,
     });
   },
-  onReachBottom: async function () {
-    db = wx.cloud.database();
-    articleList = db.collection("articleList");
-    count = await db.collection("articleList").count();
-    console.log("触底");
-    await this.loadMethod();
-  },
+  // onReachBottom: async function () {
+  //   db = wx.cloud.database();
+  //   articleList = db.collection("articleList");
+  //   count = await db.collection("articleList").count();
+  //   console.log("触底");
+  //   await this.loadMethod();
+  // },
+  // 今天吃什么
+
   loadMethod: async function (aType) {
     let sho = this.data.srh;
     let old_data = this.data.itemList;

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "TapNav": "../../component/TabNav/index"
+  }
+}

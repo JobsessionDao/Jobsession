@@ -5,22 +5,21 @@
     <view style="height: {{stateHeight}}px;z-index: 100;"></view>
     <!-- 导航栏高度，这里转换为了rpx -->
     <view style="height: {{navHeight}}px; line-height: {{navHeight}}px;display: flex; width: 100%;z-index: 100;">
-        <view style="width: 10%;" bindtap="navBack">
-            <image style="height: 80rpx;width: 80rpx;margin-left: 20rpx;" src="../../images/icons/arrow-left.png" />
+        <view style="width: 9%;" bindtap="navBack">
+            <image bindtap="navBack" style="height: 80rpx;width: 80rpx;margin-left: 20rpx;" src="../../images/icons/arrow-left.png" />
         </view>
-        <view class="sbox" style="width:90%;text-align: center;z-index: 100;">
-            <input bindinput="inputTitle" id="sh" value="{{searchValue}}" placeholder="键入搜索内容" class="serch1 items-start image-wrapper">
-                <!-- <image class="image" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16653611131175599051.png" /> -->
-                <!-- 椭圆靠右边的提交按钮 -->
-                <view bindtap="inps">
-                    <image class="ig" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/ioi3.png"></image>
-                </view>
-            </input>
+        <view class="sbox" style="width:71%;text-align: center;z-index: 100;">
+            <input bindinput="inputTitle" id="sh" value="{{searchValue}}" placeholder="键入搜索内容" class="serch1 items-start image-wrapper"></input>
+            <!-- 提交按钮 -->
+            <!-- <button style="width:30rpx;border-raduis:100%;height:90rpx;text-align:center" class="ig" bindtap="inps">
+                →
+            </button> -->
+            <image bindtap="inps" class="ig" src="https://swfoodt-blog.oss-cn-beijing.aliyuncs.com/img/wx-develop/ioi3.png"></image>
         </view>
-        <!-- <view style="width:33%;text-align: center;flex: 1;"></view> -->
+        <view style="width:20%;text-align: center;flex: 1;"></view>
     </view>
 </view>
-<view style="margin-top:150rpx">
+<view style="margin-top:250rpx">
     <view wx:for="{{itemList}}" wx:for-item="experience" wx:key="xxx">
         <!-- 小卡片 -->
         <view wx:if="{{experience.type==1}}" class="cyBlogBlock" bindtap="goToDetail1" data-item="{{experience}}">
