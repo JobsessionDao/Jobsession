@@ -1,0 +1,26 @@
+<!--pages/myEXP/index.wxml-->
+<TapNav title="我的经验" navBgColor = "{{navBgColor}}" backPath="../my/index" />
+
+
+<view wx:for="{{itemList}}" wx:for-item="experience" wx:key="xxx">
+    <!-- 小卡片 -->
+    <view class="cyBlogBlock" bindtap="goToDetail" data-item="{{experience}}">
+        <!-- 标题 -->
+        <view class="cyBlogTitle">
+            {{experience.articleTitle}}
+        </view>
+        <view class="cyFooter">
+            <!-- 左页脚 -->
+            <view class="cyBlockFooter1">
+                <image src="{{EXPleft}}"></image>
+                <text>{{experience.articleTag}}</text>
+            </view>
+            <!-- 右页脚 -->
+            <view class="cyBlockFooter2">
+                <image class="cyFooterIron2" src="{{EXPright}}"></image>
+                <text>{{experience.commentList.length}}</text>
+            </view>
+        </view>
+    </view>
+</view>
+<view class="cyTabBlock"></view>

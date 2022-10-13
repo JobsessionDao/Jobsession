@@ -1,5 +1,9 @@
 {
-    "pages": ["pages/login/index",
+    "pages": [
+        "pages/login/index",
+        "pages/myCollection/index",
+        "pages/myQA/index",
+        "pages/myEXP/index",
         "pages/push/index",
         "pages/index/index",
         "pages/aim/index",
@@ -16,7 +20,6 @@
         "pages/qa/index",
         "pages/my/index",
         "pages/changeaim/index"
-        
     ],
     "window": {
         "navigationStyle": "custom",

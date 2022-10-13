@@ -121,4 +121,19 @@ Page({
       url: "/pages/aim/index",
     });
   },
+  gomyEXP: function(){
+    wx.navigateTo({
+        url: "/pages/myEXP/index",
+      });
+  },
+  gomyQA: function(){
+    wx.navigateTo({
+        url: "/pages/myQA/index",
+      });
+  },
+  gomycollection: function(){
+    wx.navigateTo({
+        url: "/pages/myCollection/index",
+      });
+  }
 });

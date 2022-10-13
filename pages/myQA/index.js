@@ -1,4 +1,4 @@
-// pages/QaA/QaA.js
+// pages/myQA/index.js
 let getUserID = require("../../utils/getUserID.js");
 let addUser = require("../../utils/addUser.js");
 let addArticle = require("../../utils/addArticle.js");
@@ -12,6 +12,7 @@ let articleList;
 let allLength;
 let isAll = false;
 
+
 Page({
 
     /**
@@ -19,7 +20,17 @@ Page({
      */
     data: {
         itemList: [],
+        navBgColor:"rgba(251, 229, 225, 1)",
+        //卡片页脚图片
+        EXPleft:"../../images/icons/tag_s2.png",
+        EXPright:"../../images/icons/likeicon.png",
+        QAleft:"../../images/icons/tag_s1.png",
+        QAright:"../../images/icons/commenticon.png",
     },
+
+    /**
+     * 生命周期函数--监听页面加载
+     */
     loadMethod: async function (aType) {
         let old_data = this.data.itemList;
         // console.log(old_data.length+"  "+count);
@@ -71,12 +82,6 @@ Page({
             url: '/pages/QaAdetail/index?data=' + item._id,
         })
     },
-
-
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
 
     /**
      * 生命周期函数--监听页面初次渲染完成

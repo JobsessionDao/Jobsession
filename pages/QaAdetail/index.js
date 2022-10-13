@@ -86,6 +86,7 @@ Page({
         console.log(app.globalData.userInfo[2]);
         console.log(this.data.item._id);
         let res = await addLike.addLike.addMethod(this.data.item._id, app.globalData.userInfo[2]);
+        // let res2 = await addCollect.addCollect.addCollectMethod(this.data.item._id, app.globalData.userInfo[2], this.data.item.articleTitle,this.data.item.articleTag);
         if (res == "点赞成功") {
             this.setData({
                 likeNum: this.data.likeNum + 1,
@@ -109,11 +110,8 @@ Page({
                 icon: "error",
             })
         }
-
-
         console.log(this.data.praiseJudge)
         console.log("*****" + res)
-
     },
 
     commentSet: function (e) {

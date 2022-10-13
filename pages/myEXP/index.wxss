@@ -1,0 +1,85 @@
+/* pages/myEXP/index.wxss */
+page {
+    background: rgba(250, 250, 250, 1);
+}
+.cyBlogBlock {
+    position: relative;
+    margin: auto;
+    margin-top: 15rpx;
+    padding: 30rpx;
+    top: 165rpx;
+    width: 92%;
+    border-radius: 30rpx;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+
+.cyBlogTitle {
+    width: 98%;
+    padding: 0 20rpx;
+    border-left: 12rpx solid rgba(61, 97, 255, 1);
+    font-size: 20px;
+    font-weight: 700;
+    word-break: break-all;
+    box-sizing: border-box;
+  }
+  
+  .cyFooter {
+    display: flex;
+    flex-flow: row;
+  }
+  
+  .cyBlockFooter1 {
+    margin-top: 30rpx;
+    width: 120rpx;
+    height: 50rpx;
+    border-radius: 100rpx;
+    background-color: rgba(0, 81, 255, 0.1);
+    display: flex;
+    align-items: center;
+    /* 垂直居中 */
+  }
+  
+  .cyBlockFooter1 text {
+    display: block;
+    margin-left: 8rpx;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0, 81, 255, 1);
+  }
+  
+  .cyBlockFooter1 image {
+    margin-left: 15rpx;
+    width: 30rpx;
+    height: 30rpx;
+  }
+  
+  
+  .cyBlockFooter2 {
+    position: absolute;
+    right: 30rpx;
+    margin-top: 30rpx;
+    width: 120rpx;
+    height: 50rpx;
+    display: flex;
+    align-items: center;
+  }
+  
+  .cyBlockFooter2 image {
+    margin-left: 15rpx;
+    width: 35rpx;
+    height: 35rpx;
+  }
+  
+  .cyBlockFooter2 text {
+    margin-left: 15rpx;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .cyTabBlock {
+    position: relative;
+    top: 450rpx;
+    width: 100%;
+    height: 25rpx;
+}
