@@ -17,7 +17,12 @@ wx.cloud.init();
 const db = wx.cloud.database();
 const userList = db.collection("articleList");
 // 获取当前时间
-var myDate = new Date();
+var date = new Date();
+let etYear = new Date(date).getFullYear();
+// 获取 et 的年
+let etMon = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1);
+let etDay=date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
+var thisTime=etYear+"-"+etMon+"-"+etDay;
 var addArticle = {
   addMethod: async function (
     aTitle, // 文章标题
@@ -38,7 +43,7 @@ var addArticle = {
           articleTitle: aTitle, // 文章标题
           articleTag: aTag, // 文章标签
           desc: aDesc, // 文章内容
-          time: myDate, // 文章发布日期
+          time: thisTime, // 文章发布日期
           type: aType, // 文章类型
           number: 0, // 文章点赞、回答数
           commentList: [], // 文章评论列表

@@ -237,14 +237,14 @@ Page({
     let item = e.currentTarget.dataset.item;
     console.log(item);
     wx.navigateTo({
-      url: "/pages/EXPdetail/index?data=" + JSON.stringify(item),
+      url: "/pages/EXPdetail/index?data=" + item._id,
     });
   },
   goToDetail2: function (e) {
     let item = e.currentTarget.dataset.item;
     console.log(item);
     wx.navigateTo({
-      url: "/pages/QaAdetail/index?data=" + JSON.stringify(item),
+      url: "/pages/QaAdetail/index?data=" + item._id,
     });
   },
   gopush: function () {

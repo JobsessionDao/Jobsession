@@ -141,7 +141,8 @@ Page({
     var content = this.data.content
       .replace(/\r/g, "<br/>")
       .replace(/\s/g, "&nbsp;")
-      .replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;");
+      .replace(/\t/g, "&nbsp;&nbsp;&nbsp;&nbsp;")
+      .replace(/\n/g,"<br/>");
     // 获取当前时间
     var date = new Date();
     //   获取 globalData 中的 userInfo
@@ -231,13 +232,21 @@ Page({
     // 当 images 非空时，上传图片到云存储的 images 文件夹中获取图片的 fileID 生成新的数组
     var imagesA = [];
     if (this.data.images.length != 0) {
-      for (var i = 0; i < this.data.images.length; i++) {
-        var res = await wx.cloud.uploadFile({
-          cloudPath: "images/" + date.getTime() + i + ".png",
-          filePath: this.data.images[i],
-        });
-        imagesA.push(res.fileID);
-      }
+      wx.showModal({
+        title: "警告",
+        content: "问答不允许配图，图片将被忽略",
+        showCancel: true,
+        cancelText: "取消",
+        cancelColor: "#000000",
+        confirmText: "确定",
+        confirmColor: "#3CC51F",
+        success: (result) => {
+          if (result.confirm) {
+          }
+        },
+        fail: () => {},
+        complete: () => {},
+      });
     }
 
     // 调用

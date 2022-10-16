@@ -12,17 +12,18 @@ exports.main = async (event) => {
   let count = await db.collection("articleList").count();
   count = count.total;
   let all = [];
+  console.log(event);
   for (let i = 0; i < count; i += 100) {
     let list = await db
       .collection("articleList")
       .where({
-        _opneid: event.openid,
-        type: event.type,
+        _openid:event._openid,
+        type:event.type
       })
       .skip(i)
       .get();
     all = all.concat(list.data);
   }
-  console.log(all);
+  console.log(all)
   return all;
 };

@@ -61,18 +61,34 @@ Page({
     },
 
     onLoad: async function (options) {
-        wx.cloud.init();
-        db = wx.cloud.database();
-        articleList = db.collection("articleList");
-        count = await db.collection("articleList").count();
-        this.loadMethod(2);
+        // wx.cloud.init();
+        // db = wx.cloud.database();
+        // articleList = db.collection("articleList");
+        // count = await db.collection("articleList").count();
+        // this.loadMethod(2);
+        wx.cloud
+        .callFunction({
+          name: "getAllThings",
+          data: {
+            _openid:getApp().globalData.userInfo[2],
+            type:2
+          },
+        })
+        .then((res) => {
+          this.setData({
+            // data 为查询到的所有待办事项列表
+            itemList: res.result,
+          });
+        //   console.log(res);
+        //   console.log("!!!!!!!!!!!");
+        });
     },
 
     onReachBottom: async function () {
-        db = wx.cloud.database();
-        articleList = db.collection("articleList");
-        count = await db.collection("articleList").count();
-        await this.loadMethod(2);
+        // db = wx.cloud.database();
+        // articleList = db.collection("articleList");
+        // count = await db.collection("articleList").count();
+        // await this.loadMethod(2);
     },
 
     goToDetail: function (e) {

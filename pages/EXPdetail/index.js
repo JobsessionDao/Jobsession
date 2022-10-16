@@ -5,7 +5,7 @@ let getArticle = require("../../utils/getArticle.js");
 let addLike = require("../../utils/addLike.js");
 let addComment = require("../../utils/addComment.js");
 let addCollect = require("../../utils/addCollect.js");
-
+let itemo;
 const app = getApp();
 Page({
 
@@ -17,6 +17,7 @@ Page({
         likeNum: 0,
         textColor: "rgba(0, 0, 0, 1)",
         commentTest: null,
+        time:""
     },
 
     /**
@@ -24,7 +25,8 @@ Page({
      */
     async onLoad(options) {
         console.log(options.data)
-        let item = options.data
+        let item = options.data;
+        itemo=item;
         console.log("++++" + item)
         console.log(options.data)
 
@@ -34,6 +36,14 @@ Page({
             likeNum: Art.likeList.length,
             item: Art
         })
+        let etYear = new Date(Art.time).getFullYear();
+        // 获取 et 的年
+        let etMon = new Date(Art.time).getMonth();
+        let etDay=new Date(Art.time).getDay();
+        this.setData({
+            time:etYear+"-"+etMon+"-"+etDay
+        })
+       
         for (var a = 0; a < this.data.item.time.length; a++) {
             var unixTimestamp = new Date(this.data.item.time)
             var datestr = unixTimestamp.getFullYear() + "-" + (unixTimestamp.getMonth() + 1) + "-" + unixTimestamp.getDate();
@@ -102,13 +112,22 @@ Page({
             this.setData({
                 commentTest: ""
             })
+            let Art = await getArticle.getArticle.getArticleMethod(itemo);
+            this.setData({
+                likeNum: Art.likeList.length,
+                item: Art
+            })
+            wx.showToast({
+              title: '发布成功',
+              icon:"success"
+            })
         }else if(res == "评论失败"){
             wx.showToast({
                 title: '评论失败',
                 icon: "error",
             })
         }
-
+        
     },
     /**
      * 生命周期函数--监听页面初次渲染完成

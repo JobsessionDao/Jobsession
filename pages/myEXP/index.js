@@ -13,6 +13,9 @@ let allLength;
 let isAll = false;
 
 
+var app = getApp();
+
+
 Page({
 
     /**
@@ -20,7 +23,7 @@ Page({
      */
     data: {
         itemList: [],
-        navBgColor:"rgba(0, 81, 255, 0.04)",
+        navBgColor:"#F0F3FA",
         EXPleft:"../../images/icons/tag_s2.png",
         EXPright:"../../images/icons/likeicon.png",
         QAleft:"../../images/icons/tag_s1.png",
@@ -60,18 +63,36 @@ Page({
     },
 
     onLoad: async function (options) {
-        wx.cloud.init();
-        db = wx.cloud.database();
-        articleList = db.collection("articleList");
-        count = await db.collection("articleList").count();
-        this.loadMethod(1);
+        // wx.cloud.init();
+        // db = wx.cloud.database();
+        // articleList = db.collection("articleList");
+        // count = await db.collection("articleList").count();
+        // this.loadMethod(1);
+        // console.log(getApp().globalData.userInfo[2])
+        wx.cloud
+        .callFunction({
+          name: "getAllThings",
+          data: {
+            _openid:getApp().globalData.userInfo[2],
+            type:1
+          },
+        })
+        .then((res) => {
+          this.setData({
+            // data 为查询到的所有待办事项列表
+            itemList: res.result,
+          });
+        //   console.log(res);
+        //   console.log("!!!!!!!!!!!");
+        });
     },
 
     onReachBottom: async function () {
-        db = wx.cloud.database();
-        articleList = db.collection("articleList");
-        count = await db.collection("articleList").count();
-        await this.loadMethod(1);
+        // db = wx.cloud.database();
+        // articleList = db.collection("articleList");
+        // count = await db.collection("articleList").count();
+        // await this.loadMethod(1);
+      
     },
 
     goToDetail: function (e) {

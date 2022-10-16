@@ -5,7 +5,7 @@ let getArticle = require("../../utils/getArticle.js");
 let addLike = require("../../utils/addLike.js");
 let addComment = require("../../utils/addComment.js");
 let addCollect = require("../../utils/addCollect.js");
-
+let itemo;
 const app = getApp();
 Page({
 
@@ -51,7 +51,8 @@ Page({
 
     async onLoad(options) {
         console.log(options.data)
-        let item = options.data
+        let item = options.data;
+        itemo=item;
         console.log("++++" + item)
         console.log(options.data)
 
@@ -126,6 +127,11 @@ Page({
         if (res == "评论成功") {
             this.setData({
                 commentTest: ""
+            })
+            let Art = await getArticle.getArticle.getArticleMethod(itemo);
+            this.setData({
+                likeNum: Art.likeList.length,
+                item: Art
             })
         }else if(res == "评论失败"){
             wx.showToast({

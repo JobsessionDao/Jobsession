@@ -31,7 +31,7 @@
                 <image class="image_2" src="../../images/icons/addimage.png" />
             </view>
         </view>
-        <text style="text-align:center;color:gray;font-size:18rpx;height:30rpx">点击图片可删除</text>
+        <text style="text-align:center;color:gray;font-size:18rpx;height:30rpx">点击图片可删除，问答不允许配图</text>
         <view class="flex-row space-x-7 equal-division_2">
             <image bindtap="publish1" class="equal-division-item_4" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16655635933346708588.png" />
             <image bindtap="publish2" class="equal-division-item_4" src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/62429e655a7e3f031090c9dc/6342efacf9b4a40011d82c83/16655635933378082864.png" />
