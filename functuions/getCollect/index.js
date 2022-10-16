@@ -9,15 +9,14 @@ cloud.init({
 // 云函数入口函数
 exports.main = async (event) => {
   const db = cloud.database();
-  let count = await db.collection("articleList").count();
+  let count = await db.collection("userList").count();
   count = count.total;
   let all = [];
   for (let i = 0; i < count; i += 100) {
     let list = await db
-      .collection("articleList")
+      .collection("userList")
       .where({
         _opneid: event.openid,
-        type: event.type,
       })
       .skip(i)
       .get();

@@ -68,7 +68,7 @@ Page({
         // articleList = db.collection("articleList");
         // count = await db.collection("articleList").count();
         // this.loadMethod(1);
-        // console.log(getApp().globalData.userInfo[2])
+        console.log(getApp().globalData.userInfo[2])
         wx.cloud
         .callFunction({
           name: "getAllThings",

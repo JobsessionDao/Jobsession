@@ -80,7 +80,7 @@ page {
     flex-shrink: 0;
     box-sizing: border-box;
     padding: 14rpx;
-    width: 40%;
+    width: 100%;
     height: auto;
 }
 

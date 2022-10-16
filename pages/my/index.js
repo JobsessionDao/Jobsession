@@ -43,6 +43,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this;
     this.setData({
       userInfo: app.globalData.userInfo,
     });
@@ -59,13 +60,15 @@ Page({
         success: function (res) {
           // 获取 res 中的linkeCre、expCre、collectNum、CollectList、CreateList数据
           console.log(res.data);
-          this.setData({
+          console.log("@@"+res.data[0].likeCre)
+          that.setData({
             likeCre: res.data[0].likeCre,
             expCre: res.data[0].expCre,
-            collectNum: res.data[0].collectNum,
+            collectNum: res.data[0].CollectList.length,
             CollectList: res.data[0].CollectList,
             CreateList: res.data[0].CreateList,
           });
+          
         },
       });
   },

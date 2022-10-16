@@ -158,7 +158,22 @@ Page({
         imagesA.push(res.fileID);
       }
     }
-
+    const db = wx.cloud.database();
+    const userList = db.collection("userList");
+    userList
+      .where({
+        _openid: userInfo[2],
+      })
+      .update({
+        // 更新 likeCre的值为+10
+        data: {
+          //自加10
+          expCre: db.command.inc(1),
+        },
+        success: function (res) {
+          console.log(res.data);
+        },
+      });
     // 调用
     let resa = await addArticle.addArticle.addMethod(
       this.data.title,

@@ -6,6 +6,7 @@ let addLike = require("../../utils/addLike.js");
 let addComment = require("../../utils/addComment.js");
 let addCollect = require("../../utils/addCollect.js");
 let itemo;
+let arti;
 const app = getApp();
 Page({
 
@@ -58,6 +59,7 @@ Page({
 
         //获取点赞
         let Art = await getArticle.getArticle.getArticleMethod(item);
+        arti=Art;
         this.setData({
             likeNum: Art.likeList.length,
             item: Art
@@ -94,6 +96,24 @@ Page({
                 textColor: "rgba(255, 87, 51, 1)",
                 praiseJudge: 1
             })
+            wx.cloud.init();
+      const db = wx.cloud.database();
+      const userList = db.collection("userList");
+      userList
+        .where({
+          _openid: this.data._openid,
+        })
+        .update({
+          // 更新 likeCre的值为+10
+          data: {
+            //自加10
+            // likeCre: db.command.inc(1),
+            CollectList: db.command.push(arti),
+          },
+          success: function (res) {
+            console.log(res.data);
+          },
+        });
         } else if (res == "取消点赞成功") {
             this.setData({
                 likeNum: this.data.likeNum - 1,

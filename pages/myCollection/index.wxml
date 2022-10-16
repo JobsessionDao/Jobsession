@@ -2,22 +2,23 @@
 <TapNav title="我的收藏" navBgColor = "{{navBgColor}}" backPath="../my/index" />
 
 
-<view wx:for="{{itemList}}" wx:for-item="experience" wx:key="xxx">
+
+<view wx:for="{{CollectList}}" wx:for-item="experience" wx:key="xxx">
     <!-- 小卡片 -->
     <view class="cyBlogBlock" bindtap="goToDetail" data-item="{{experience}}">
         <!-- 标题 -->
-        <view class="cyBlogTitle">
+        <view style="border-left: 12rpx solid  {{experience.type==1?EXPtxcolor:QAtxcolor}};" class="cyBlogTitle">
             {{experience.articleTitle}}
         </view>
         <view class="cyFooter">
             <!-- 左页脚 -->
-            <view class="cyBlockFooter1">
-                <image src="{{EXPleft}}"></image>
-                <text>{{experience.articleTag}}</text>
+            <view style="background-color:  {{experience.type==1?EXPcolor:QAcolor}};" class="cyBlockFooter1">
+                <image src="{{experience.type==1?EXPleft:QAleft}}"></image>
+                <text style="color: {{experience.type==1?EXPtxcolor:QAtxcolor}};">{{experience.articleTag}}</text>
             </view>
             <!-- 右页脚 -->
             <view class="cyBlockFooter2">
-                <image class="cyFooterIron2" src="{{EXPright}}"></image>
+                <image class="cyFooterIron2" src="{{experience.type==1?EXPright:QAright}}"></image>
                 <text>{{experience.commentList.length}}</text>
             </view>
         </view>
