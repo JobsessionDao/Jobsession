@@ -73,7 +73,7 @@ Page({
         .callFunction({
           name: "getAllThings",
           data: {
-            _openid:getApp().globalData.userInfo[2],
+           _openid:getApp().globalData.userInfo[2],
             type:1
           },
         })
@@ -82,7 +82,7 @@ Page({
             // data 为查询到的所有待办事项列表
             itemList: res.result,
           });
-        //   console.log(res);
+          console.log(res.result);
         //   console.log("!!!!!!!!!!!");
         });
     },

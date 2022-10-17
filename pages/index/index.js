@@ -130,7 +130,7 @@ Page({
         articleList
           .where({
             type: aType,
-            number: db.command.gte(1),
+            number: db.command.gte(10),
           })
           .limit(3)
           .orderBy("number", "desc")
@@ -157,7 +157,7 @@ Page({
         articleList
           .where({
             type: aType,
-            number: db.command.gte(1),
+            number: db.command.gte(10),
           })
           .limit(3)
           .orderBy("number", "desc")
@@ -251,5 +251,20 @@ Page({
     wx.navigateTo({
       url: "/pages/push/index",
     });
+  },
+  onShareAppMessage: function (res) {
+    var that = this;
+    return {
+      title: '职念生涯社区',
+      path: '/pages/login/index',
+      imageUrl:'https://jetzihan-img.oss-cn-beijing.aliyuncs.com/blog/pnels.png',
+      success: function (res) {
+        // 转发成功
+        that.shareClick();
+      },
+      fail: function (res) {
+        // 转发失败
+      }
+    }
   },
 });

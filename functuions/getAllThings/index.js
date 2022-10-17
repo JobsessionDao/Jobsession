@@ -16,7 +16,7 @@ exports.main = async (event) => {
     let list = await db
       .collection("articleList")
       .where({
-        _opneid: event.openid,
+        _openid: event._openid,
         type: event.type,
       })
       .skip(i)

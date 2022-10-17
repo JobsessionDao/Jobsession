@@ -5,7 +5,7 @@
     <view class="flex-col">
         <input bindinput="titleInput" class="text text_2" placeholder="请填写标题" />
         <view class="flex-row space-x-4 group">
-            <text class="text_3">点击选择话题</text>
+            <text class="text_3">点击右侧选择话题</text>
             <!-- 使用微信 API 编写一个选择器 -->
             <picker mode="selector" value="{{index}}" range="{{array}}" bindchange="bindPickerChange">
                 <view class="flex-row justify-evenly equal-division-item">

@@ -71,9 +71,10 @@ page {
 }
 
 .cyImageList {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 100%;
+    /* display: flex; */
+    /* flex-direction: row;
+    flex-wrap: wrap; */
 }
 
 .cyContentImage {
@@ -86,7 +87,7 @@ page {
 
 .cyContentImage image {
     border-radius: 30rpx;
-    width: 312rpx;
+    width: 100%;
     height: 295rpx;
 }
 

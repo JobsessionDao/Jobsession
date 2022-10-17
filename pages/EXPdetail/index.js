@@ -213,4 +213,12 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage() {},
+  preview(event) {
+    console.log(event.currentTarget.dataset.src)
+    let currentUrl = event.currentTarget.dataset.src
+    wx.previewImage({
+      current: currentUrl, // 当前显示图片的http链接
+      urls: this.data.item.imageList // 需要预览的图片http链接列表
+    })
+  }
 });

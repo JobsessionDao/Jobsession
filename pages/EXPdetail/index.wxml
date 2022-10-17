@@ -16,8 +16,8 @@
     <rich-text style="white-space:pre-line" decode="true" class="cyContentText" nodes="{{item.desc}}"></rich-text>
     <view class="cyImageList">
         <view  wx:for="{{item.imageList}}" wx:for-item="item" wx:key="xxx">
-            <view class="cyContentImage">
-                <image src='{{item}}'></image>
+            <view bindtap="preview" data-src="{{item}}" class="cyContentImage">
+                <image  mode="aspectFill" src='{{item}}'></image>
             </view>
         </view>
     </view>
